@@ -1,8 +1,24 @@
-div{
+app-logo-ap{
+    float:left;
     background-color: rgb(70, 70, 70);
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    width: 50%;
+ 
 }
 app-iconos-social{
     float:right;
-    padding-top:7px;
-    padding-right: 20px;
+    width: 50%;
+    background-color: rgb(70, 70, 70)
 }
+/*Para redondear al banner*/
+app-banner{
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
+div{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}   
