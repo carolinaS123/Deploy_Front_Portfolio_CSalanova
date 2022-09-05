@@ -1,16 +1,10 @@
 .row{
+    margin-top: 15px;
     padding: 20px;
-    margin-top:20px;
     margin-left: 10px;
     margin-right: 10px;
 }
 div{
     background-color: rgb(255, 226, 146);
     border-radius: 3em;
-}
-h1, h3{
-    display: inline;
-}
-li{
-    list-style: none;
 }

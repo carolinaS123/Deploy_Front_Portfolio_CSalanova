@@ -1,12 +1,12 @@
 .row{
     margin-top: 15px;
     padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 div{
     background-color: rgb(255, 226, 146);
     border-radius: 3em;
-    margin-left: 10px;
-    margin-right: 10px;
     text-align: center;
 }
 #nombreApellido{
