@@ -11,6 +11,10 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { LoginComponent } from './componentes/modals/login/login.component';
+import { EditBannerComponent } from './componentes/modals/edit-banner/edit-banner.component';
+import { EditAcercaDeComponent } from './componentes/modals/edit-acerca-de/edit-acerca-de.component';
+import { EditExperienciaComponent } from './componentes/modals/edit-experiencia/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
     ProyectosComponent,
     FooterComponent,
     NavbarComponent,
+    LoginComponent,
+    EditBannerComponent,
+    EditAcercaDeComponent,
+    EditExperienciaComponent,
   ],
   imports: [
     BrowserModule,
