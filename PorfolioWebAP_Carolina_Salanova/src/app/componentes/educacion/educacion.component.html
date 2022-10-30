@@ -1,9 +1,56 @@
-<div class="row">
-     <h1>Educación</h1>
-     <div class="col-lg-12">
-        <ul>
-          <li><h3>Años - Estudio - Institución</h3></li>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad aliquam sint officia quae ipsum consectetur quidem rerum itaque commodi quis nulla, saepe labore, ipsa hic suscipit porro ab cumque? Architecto!</p>  
-        </ul>
-     </div>
-</div>
+<section id="educación" class="estudios">
+  <div class="contenedor">
+    <div class="row bg-dark p-2 bg-opacity-10">
+      <div class="col-md-10">
+        <h4>Educación</h4>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalEducacion" data-bs-toggle="modal">Agregar+</button>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-responsive table-rb- ">
+        <thead>
+          <tr>
+            <th scope="col" colspan="12"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Institución</p>
+            </td>
+            <td>
+              <p>Carrera/Curso/Titulación</p>
+            </td>
+            <td>
+              <p>Desde</p>
+            </td>
+            <td>
+              <p>Hasta</p>
+            </td>
+            <td>
+              <a type="button" class="btn-editar" data-bs-target="#modalEducacion" data-bs-toggle="modal">
+                <img class="nav-menu-link-img"
+                  src="../../../assets/edit.png"
+                  id="editar">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <P>Decripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident hic aut ea,
+                minima optio quasi ducimus repellendus</P>
+            <td>
+              <a type="button" class="btn-borrar">
+                <img class="nav-menu-link-img"
+                  src="../../../assets/delete.png"
+                  id="borrar">
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

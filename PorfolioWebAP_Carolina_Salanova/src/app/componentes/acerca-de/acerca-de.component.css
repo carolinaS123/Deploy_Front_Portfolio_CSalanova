@@ -1,39 +1,74 @@
-.row{
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+/*Texto responsive*/
+h3 h4 h5 {
+    font-size: 1rem;
+}
+
+p {
+    font-weight: bold;
+}
+
+/*ACERCA DE*/
+
+.d-flex {
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#imagenPerfil {
     margin-top: 15px;
-    padding: 20px;
     margin-left: 10px;
-    margin-right: 10px;
-}
-div{
-    background-color: rgb(255, 226, 146);
-    border-radius: 3em;
-    text-align: center;
-}
-#nombreApellido{
-   font-weight: bold;
-   margin-top: 20%;
-}
-@media(max-width: 678px){ /*caundo llegue al minimo de pantalla(aqui se marco con 576px) va a pasar esto...*/
-    #imagenPerfil{
-        width: 35%;
-        position: absolute;
-        border-radius: 100%;
-        border-style:ridge;
-        left:32%;
-        z-index: 1;
-        top:400px;
-    }
- }
- @media(min-width: 679px){
-#imagenPerfil{
-    width: 16%;
-    position: absolute;
-    border-radius: 100%;
-    border-style:ridge;
-    left:5%;
+    width: 10em;
+    border-radius: 1px;
     z-index: 1;
-    top:350px;
-   }
+    box-shadow: 6px 20px 10px rgb(8, 8, 8);
+}
+
+.contenedor {
+    background: linear-gradient(#a895d4, #392b72);
+    -webkit-text-fill-color: aliceblue;
+    height: auto;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 1em;
+}
+.nav-menu-link-img{
+    padding: 2px;
+    height: 2em;
  }
+@media(max-width: 768px) {
+        .nav-menu-link-img{
+        height: 2rem;
+    }
+    h3 h4 h5 {
+        font-size: 1.2rem;
+    }
 
-
+    #imagenPerfil {
+        margin-top: 7px;
+        margin-left: 5px;
+        width: 6em;
+    }
+    .contenedor{
+        height: auto;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        padding-top: 0.5em;
+        border-radius: 0.5em;
+     }
+}

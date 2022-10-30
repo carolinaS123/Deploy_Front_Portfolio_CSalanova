@@ -1,9 +1,59 @@
-<div class="row">
-    <h1>Experiencia Laboral</h1>
-    <div class="col-lg-12">
-       <ul>
-         <li><h3>Años - Trabajo - Empresa</h3></li>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad aliquam sint officia quae ipsum consectetur quidem rerum itaque commodi quis nulla, saepe labore, ipsa hic suscipit porro ab cumque? Architecto!</p>  
-       </ul>
+<section id="experiencia" class="experiencias">
+  <div class="contenedor">
+    <div class="row bg-dark p-2  bg-opacity-10">
+      <div class="col-md-10">
+        <h4>Experiencia</h4>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalExperiencia"
+          data-bs-toggle="modal">Agregar+</button>
+      </div>
     </div>
-</div>
+    <div class="table-responsive">
+      <table class="table table-responsive table-bg-#rgb(255, 226, 146)">
+        <thead>
+          <tr>
+            <th scope="col" colspan="12">
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Empresa</p>
+            </td>
+            <td>
+              <P>Tarea/Ocupación/wwwwwwww</P>
+            </td>
+            <td>
+              <p>Desde</p>
+            </td>
+            <td>
+              <P>Hasta</P>
+            </td>
+            <td>
+              <a type="button" class="btn-editar" data-bs-target="#modalExperiencia" data-bs-toggle="modal">
+                <img class="nav-menu-link-img"
+                  src="../../../assets/edit.png"
+                  id="editar">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <p>Descripción Lorem ipsum dolor sit ametne deleniti magni temporibus voluptates
+                harum exercitationem, sequi labore suscipit natus! Eum</p>
+            </td>
+            <td>
+              <a type="button" class="btn-borrar">
+                <img class="nav-menu-link-img"
+                  src="../../../assets/delete.png"
+                  id="borrar">
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

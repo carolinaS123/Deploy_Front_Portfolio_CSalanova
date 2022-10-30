@@ -1,12 +1,66 @@
-<div class="row">
-    <h1>Proyectos</h1>
+<section id="proyecto" class="proyectos">
     <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7 parteTexto">
-           <h2>Proyecto 1</h2>
-           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dolores ut sed voluptatum totam, voluptates recusandae itaque eum tempore officia ipsa cumque aperiam magni earum ducimus, repellat sunt possimus perferendis?</p>
+        <div class="row bg-dark p-2 bg-opacity-10 ">
+            <div class="col-md-10">
+                <h4>Proyectos</h4>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalProyectos"
+                    data-bs-toggle="modal">Agregar+</button>
+            </div>
         </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1  offset parteLinkImagen">
-           <a href="../../../assets/proyecto1.png" color="blue"><img src="../../../assets/proyecto1.png" class="img-fluid img-proyecto"></a>
+        <div class="table-responsive">
+            <table class="table table-rb-#rgb(255, 226, 146)">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="12">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Nombre del Proyecto</p>
+                        </td>
+                        <td colspan="2">
+                            <p>Descripción Lorem ipsum dolor sit ametne deleniti magni temporibus voluptates
+                                harum exercitationem, sequi labore suscipit natus! Eum</p>
+                        </td>
+                        <td>
+                            <a type="button" class="btn-editar" data-bs-target="#modalProyectos" data-bs-toggle="modal">
+                                <img class="nav-menu-link-img"
+                                    src="../../../assets/edit.png"
+                                    id="editar">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>2014</p>
+                        </td>
+                        <td>
+                            <p>2015</p>
+                        </td>
+                        <td>
+                            <p>Imagen</p>
+                        </td>
+                        <td>
+                            <a type="button" class="btn-borrar">
+                                <img class="nav-menu-link-img"
+                                    src="../../../assets/delete.png"
+                                    id="borrar">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <a href="">
+                                <P>https://wwwProyecto1.com/blablabla/12345/blalbalballablab/123</P>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-</div>
+</section>

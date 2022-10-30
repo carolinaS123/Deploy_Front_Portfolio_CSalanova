@@ -1,17 +1,31 @@
-<div class="row">
-     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/AvatarMaker.png" class="img-fluid" id="imagenPerfil">
-     </div>
-     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <P id="nombreApellido">Carolina Salanova</P>
-        <p>Full Stack Developer student</p>
-     </div>
-     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <span>
-            <h1>Acerca de mi</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus porro odit, nostrum molestiae, ducimus sequi sint provident optio quos in repellat placeat. Nostrum eum nisi dolorem, aliquid reiciendis magnam aut?
-            </p>
-        </span>
-     </div>
-</div>
+<!-------ACERCA DE MI-------->
+<section id="acerca_de" class="acerca">
+   <div class="contenedor">
+      <div class="d-flex p-2 bd-highlight">
+         <div class="flex-shrink-0">
+            <img class="img-responsive rounded-circle" id="imagenPerfil"
+               src="../../../assets/AvatarMaker.png"
+               alt="...">
+         </div>
+         <div class="flex-grow-1 ms-3">
+            <h3 small class="text-muted bg-dark  p-2 bg-opacity-10">Carolina Salanova</h3>
+            <h5>Full Stack Developer student</h5>
+            <br>
+            <h4 small class="bg-dark p-2 bg-opacity-10">Acerca de mi</h4>
+            <p>Decripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident hic aut ea,
+               minima optio quasi ducimus repellendus</p>
+         </div>
+         <div class="flex-grow-1 ms-3">
+            <br>
+            <br>
+            <a type="button" class="btn-editar" data-bs-target="#modalAcercade" data-bs-toggle="modal">
+               <img class="nav-menu-link-img" src="../../../assets/edit.png" id="editar">
+            </a>
+            <br>
+            <a type="button" class="btn-borrar">
+               <img class="nav-menu-link-img" src="../../../assets/delete.png" id="borrar">
+            </a>
+         </div>
+      </div>
+   </div>
+</section>
