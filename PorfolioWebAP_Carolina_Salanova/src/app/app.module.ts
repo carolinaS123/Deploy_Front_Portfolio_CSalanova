@@ -15,6 +15,15 @@ import { LoginComponent } from './componentes/modals/login/login.component';
 import { EditBannerComponent } from './componentes/modals/edit-banner/edit-banner.component';
 import { EditAcercaDeComponent } from './componentes/modals/edit-acerca-de/edit-acerca-de.component';
 import { EditExperienciaComponent } from './componentes/modals/edit-experiencia/edit-experiencia.component';
+import { ErrorComponent } from './componentes/error/error.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { EditEducacionComponent } from './componentes/modals/edit-educacion/edit-educacion.component';
+import { EditSkillComponent } from './componentes/modals/edit-skill/edit-skill.component';
+import { EditProyectoComponent } from './componentes/modals/edit-proyecto/edit-proyecto.component';
+import { AddExperienciaComponent } from './componentes/modals/add-experiencia/add-experiencia.component';
+import { AddEducacionComponent } from './componentes/modals/add-educacion/add-educacion.component';
+import { AddSkillComponent } from './componentes/modals/add-skill/add-skill.component';
+import { AddProyectoComponent } from './componentes/modals/add-proyecto/add-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +40,15 @@ import { EditExperienciaComponent } from './componentes/modals/edit-experiencia/
     EditBannerComponent,
     EditAcercaDeComponent,
     EditExperienciaComponent,
+    ErrorComponent,
+    DashboardComponent,
+    EditEducacionComponent,
+    EditSkillComponent,
+    EditProyectoComponent,
+    AddExperienciaComponent,
+    AddEducacionComponent,
+    AddSkillComponent,
+    AddProyectoComponent,
   ],
   imports: [
     BrowserModule,
