@@ -1,0 +1,91 @@
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-dark py-0">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="nav-menu-link-icono" src="./assets/APLogo-20-20.png"></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+        <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item">
+                <a href="#"><img class="nav-menu-link-img" src="./assets/github.png"></a>
+            </li>
+            <li class="nav-item">
+                <a href="#"><img class="nav-menu-link-img" src="./assets/linkedin.png"></a>
+            </li>
+            <li class="nav-item">
+                <a href="#"><img class="nav-menu-link-img" src="./assets/facebook.png"></a>
+            </li>
+            <!--Boton para salir del estado de logueado-->
+            <li class="nav-item">
+                <app-boton-logout></app-boton-logout>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="contenedor">
+    <!--dashboard-->
+    <div id="fondo">
+        <!--boton para volver al inicio-->
+        <section class="p-2 m-0 border-0 bd-example">
+            <div class="container text-center">
+                <br>
+                <button type="button" class="btn btn-dark"><a href="#">
+                        <img src="./assets/home.png"></a>
+                </button>
+            </div>
+        </section>
+        <!--BANNER-->
+        <section class="p-2 m-0 border-0 bd-example">
+            <div class="container text-center">
+                <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalBanner"
+                    data-bs-toggle="modal">Banner</button>
+            </div>
+        </section>
+        <!------Fin del modal de banner---------->
+        <!--ACERCA DE-->
+        <section class="p-2 m-0 border-0 bd-example">
+            <div class="container text-center">
+                <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalAcercade"
+                    data-bs-toggle="modal">Acerca de mi</button>
+            </div>
+        </section>
+        <!---------------------------------------------------------------------------->
+        <!--EXPERIENCIA-->
+        <section class="p-2 m-0 border-0 bd-example">
+            <div class="container text-center">
+                <button class="btn btn-dark btn-sm" data-bs-target="#modalExperiencia"
+                    data-bs-toggle="modal">Experiencia</button>
+            </div>
+        </section>
+        <!---------------------------------------------------------------------------->
+        <!--EDUCACION-->
+        <section class="p-2 m-0 border-0 bd-example">
+            <div class="container text-center">
+                <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalEducacion"
+                    data-bs-toggle="modal">Educación</button>
+            </div>
+        </section>
+        <!---------------------------------------------------------------------------->
+        <!--SKILLS-->
+        <section class="p-2 m-0 border-0 bd-example">
+            <div class="container text-center">
+                <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalSkills"
+                    data-bs-toggle="modal">Skills</button>
+            </div>
+        </section>
+        <!---------------------------------------------------------------------------->
+        <!--PROYECTOS-->
+        <section class="p-2 m-0 border-0 bd-example">
+            <div class="container text-center">
+                <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalProyectos"
+                    data-bs-toggle="modal">Proyectos</button>
+            </div>
+        </section>
+    </div>
+</div>
+<app-footer></app-footer>
+<app-modal-banner></app-modal-banner>    
+<app-modal-acerca-de></app-modal-acerca-de>
+<app-modal-experiencia></app-modal-experiencia>
+<app-modal-educacion></app-modal-educacion>
+<app-modal-skill></app-modal-skill>
+<app-modal-proyecto></app-modal-proyecto>

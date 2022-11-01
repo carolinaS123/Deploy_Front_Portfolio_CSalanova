@@ -11,19 +11,20 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
-import { LoginComponent } from './componentes/modals/login/login.component';
-import { EditBannerComponent } from './componentes/modals/edit-banner/edit-banner.component';
-import { EditAcercaDeComponent } from './componentes/modals/edit-acerca-de/edit-acerca-de.component';
-import { EditExperienciaComponent } from './componentes/modals/edit-experiencia/edit-experiencia.component';
-import { ErrorComponent } from './componentes/error/error.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
-import { EditEducacionComponent } from './componentes/modals/edit-educacion/edit-educacion.component';
-import { EditSkillComponent } from './componentes/modals/edit-skill/edit-skill.component';
-import { EditProyectoComponent } from './componentes/modals/edit-proyecto/edit-proyecto.component';
-import { AddExperienciaComponent } from './componentes/modals/add-experiencia/add-experiencia.component';
-import { AddEducacionComponent } from './componentes/modals/add-educacion/add-educacion.component';
-import { AddSkillComponent } from './componentes/modals/add-skill/add-skill.component';
-import { AddProyectoComponent } from './componentes/modals/add-proyecto/add-proyecto.component';
+import { ErrorComponent } from './componentes/error/error.component';
+import { InicioComponent } from './componentes/inicio/inicio.component';
+import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
+import { ModalLoginComponent } from './componentes/modals/modal-login/modal-login.component';
+import { ModalLogoutComponent } from './componentes/modals/modal-logout/modal-logout.component';
+import { ModalBannerComponent } from './componentes/modals/modal-banner/modal-banner.component';
+import { ModalAcercaDeComponent } from './componentes/modals/modal-acerca-de/modal-acerca-de.component';
+import { ModalExperienciaComponent } from './componentes/modals/modal-experiencia/modal-experiencia.component';
+import { ModalEducacionComponent } from './componentes/modals/modal-educacion/modal-educacion.component';
+import { ModalSkillComponent } from './componentes/modals/modal-skill/modal-skill.component';
+import { ModalProyectoComponent } from './componentes/modals/modal-proyecto/modal-proyecto.component';
+import { BotonLoginComponent } from './componentes/boton-login/boton-login.component';
+import { BotonLogoutComponent } from './componentes/boton-logout/boton-logout.component';
 
 @NgModule({
   declarations: [
@@ -36,19 +37,20 @@ import { AddProyectoComponent } from './componentes/modals/add-proyecto/add-proy
     ProyectosComponent,
     FooterComponent,
     NavbarComponent,
-    LoginComponent,
-    EditBannerComponent,
-    EditAcercaDeComponent,
-    EditExperienciaComponent,
-    ErrorComponent,
     DashboardComponent,
-    EditEducacionComponent,
-    EditSkillComponent,
-    EditProyectoComponent,
-    AddExperienciaComponent,
-    AddEducacionComponent,
-    AddSkillComponent,
-    AddProyectoComponent,
+    ErrorComponent,
+    InicioComponent,
+    NavBarComponent,
+    ModalLoginComponent,
+    ModalLogoutComponent,
+    ModalBannerComponent,
+    ModalAcercaDeComponent,
+    ModalExperienciaComponent,
+    ModalEducacionComponent,
+    ModalSkillComponent,
+    ModalProyectoComponent,
+    BotonLoginComponent,
+    BotonLogoutComponent
   ],
   imports: [
     BrowserModule,
