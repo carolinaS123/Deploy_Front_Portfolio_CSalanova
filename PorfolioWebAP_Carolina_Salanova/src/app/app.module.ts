@@ -25,6 +25,14 @@ import { ModalSkillComponent } from './componentes/modals/modal-skill/modal-skil
 import { ModalProyectoComponent } from './componentes/modals/modal-proyecto/modal-proyecto.component';
 import { BotonLoginComponent } from './componentes/boton-login/boton-login.component';
 import { BotonLogoutComponent } from './componentes/boton-logout/boton-logout.component';
+import { BtnAddExperienciaComponent } from './componentes/btn-add-experiencia/btn-add-experiencia.component';
+import { BtnAddEducacionComponent } from './componentes/btn-add-educacion/btn-add-educacion.component';
+import { BtnAddSkillComponent } from './componentes/btn-add-skill/btn-add-skill.component';
+import { BtnAddProyectoComponent } from './componentes/btn-add-proyecto/btn-add-proyecto.component';
+import { AddModalExperienciaComponent } from './componentes/modals/add-modal-experiencia/add-modal-experiencia.component';
+import { AddModalEducacionComponent } from './componentes/modals/add-modal-educacion/add-modal-educacion.component';
+import { AddModalSkillComponent } from './componentes/modals/add-modal-skill/add-modal-skill.component';
+import { AddModalProyectoComponent } from './componentes/modals/add-modal-proyecto/add-modal-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +58,15 @@ import { BotonLogoutComponent } from './componentes/boton-logout/boton-logout.co
     ModalSkillComponent,
     ModalProyectoComponent,
     BotonLoginComponent,
-    BotonLogoutComponent
+    BotonLogoutComponent,
+    BtnAddExperienciaComponent,
+    BtnAddEducacionComponent,
+    BtnAddSkillComponent,
+    BtnAddProyectoComponent,
+    AddModalExperienciaComponent,
+    AddModalEducacionComponent,
+    AddModalSkillComponent,
+    AddModalProyectoComponent
   ],
   imports: [
     BrowserModule,

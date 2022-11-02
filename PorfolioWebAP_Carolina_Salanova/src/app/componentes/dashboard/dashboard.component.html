@@ -23,69 +23,85 @@
 </nav>
 <div class="contenedor">
     <!--dashboard-->
-    <div id="fondo">
-        <!--boton para volver al inicio-->
-        <section class="p-2 m-0 border-0 bd-example">
-            <div class="container text-center">
-                <br>
-                <button type="button" class="btn btn-dark"><a href="#">
-                        <img src="./assets/home.png"></a>
-                </button>
+    <!--boton para volver al inicio-->
+    <section class="p-2 m-0 border-0 bd-example">
+        <div class="container text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button type="button" class="btn btn-dark btn-sm"><a routerLink="/inicio">
+                            <img src="./assets/home.png"></a>
+                    </button>
             </div>
-        </section>
-        <!--BANNER-->
-        <section class="p-2 m-0 border-0 bd-example">
-            <div class="container text-center">
+        </div>
+    </section>
+    <!--BANNER-->
+    <section class="p-2 m-0 border-0 bd-example">
+        <div class="container text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalBanner"
                     data-bs-toggle="modal">Banner</button>
             </div>
-        </section>
-        <!------Fin del modal de banner---------->
-        <!--ACERCA DE-->
-        <section class="p-2 m-0 border-0 bd-example">
-            <div class="container text-center">
+        </div>
+    </section>
+    <!--ACERCA DE-->
+    <section class="p-2 m-0 border-0 bd-example">
+        <div class="container text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalAcercade"
-                    data-bs-toggle="modal">Acerca de mi</button>
+                    data-bs-toggle="modal">Acerca
+                    de mi</button>
             </div>
-        </section>
-        <!---------------------------------------------------------------------------->
-        <!--EXPERIENCIA-->
-        <section class="p-2 m-0 border-0 bd-example">
-            <div class="container text-center">
+        </div>
+    </section>
+    <!--EXPERIENCIA-->
+    <section class="p-2 m-0 border-0 bd-example">
+        <div class="container text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <button class="btn btn-dark btn-sm" data-bs-target="#modalExperiencia"
                     data-bs-toggle="modal">Experiencia</button>
+                <app-btn-add-experiencia></app-btn-add-experiencia>
             </div>
-        </section>
-        <!---------------------------------------------------------------------------->
-        <!--EDUCACION-->
-        <section class="p-2 m-0 border-0 bd-example">
-            <div class="container text-center">
+        </div>
+    </section>
+    <!--EDUCACION-->
+    <section class="p-2 m-0 border-0 bd-example">
+        <div class="container text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalEducacion"
                     data-bs-toggle="modal">Educación</button>
+                <app-btn-add-educacion></app-btn-add-educacion>
             </div>
-        </section>
-        <!---------------------------------------------------------------------------->
-        <!--SKILLS-->
-        <section class="p-2 m-0 border-0 bd-example">
-            <div class="container text-center">
-                <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalSkills"
-                    data-bs-toggle="modal">Skills</button>
+        </div>
+    </section>
+    <!--SKILLS-->
+    <section class="p-2 m-0 border-0 bd-example">
+        <div class="container text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalSkills"
+                        data-bs-toggle="modal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skill&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <app-btn-add-skill></app-btn-add-skill>
             </div>
-        </section>
-        <!---------------------------------------------------------------------------->
-        <!--PROYECTOS-->
-        <section class="p-2 m-0 border-0 bd-example">
-            <div class="container text-center">
+        </div>
+    </section>
+    <!--PROYECTOS-->
+    <section class="p-2 m-0 border-0 bd-example">
+        <div class="container text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <button type="button" class="btn btn-dark btn-sm" data-bs-target="#modalProyectos"
                     data-bs-toggle="modal">Proyectos</button>
+                <app-btn-add-proyecto></app-btn-add-proyecto>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </div>
+
 <app-footer></app-footer>
-<app-modal-banner></app-modal-banner>    
+<app-modal-banner></app-modal-banner>
 <app-modal-acerca-de></app-modal-acerca-de>
 <app-modal-experiencia></app-modal-experiencia>
 <app-modal-educacion></app-modal-educacion>
 <app-modal-skill></app-modal-skill>
 <app-modal-proyecto></app-modal-proyecto>
+<app-add-modal-experiencia></app-add-modal-experiencia>
+<app-add-modal-educacion></app-add-modal-educacion>
+<app-add-modal-skill></app-add-modal-skill>
+<app-add-modal-proyecto></app-add-modal-proyecto>
