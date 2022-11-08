@@ -5,7 +5,7 @@
         <h4>Experiencia</h4>
       </div>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive" *ngFor="let experiencia of experiencias">
       <table class="table table-responsive table-bg-#rgb(255, 226, 146)">
         <thead>
           <tr>
@@ -16,22 +16,21 @@
         <tbody>
           <tr>
             <td>
-              <p>Empresa</p>
+              <p>{{experiencia.id}}- {{experiencia.empresa}}</p>
             </td>
             <td>
-              <P>Tarea/Ocupación/wwwwwwww</P>
+              <P>{{experiencia.puesto}}</P>
             </td>
             <td>
-              <p>Desde</p>
+              <p>{{experiencia.inicio}}</p>
             </td>
             <td>
-              <P>Hasta</P>
+              <P>{{experiencia.final}}</P>
             </td>
           </tr>
           <tr>
-            <td colspan="4">
-              <p>Descripción Lorem ipsum dolor sit ametne deleniti magni temporibus voluptates
-                harum exercitationem, sequi labore suscipit natus! Eum</p>
+            <td colspan="12">
+              <p>{{experiencia.descripcion}}</p>
             </td>
           </tr>
         </tbody>

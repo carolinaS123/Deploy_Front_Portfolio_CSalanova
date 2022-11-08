@@ -5,7 +5,7 @@
                 <h4>Proyectos</h4>
             </div>
         </div>
-        <div class="table-responsive">
+        <div class="table-responsive" *ngFor="let proyecto of proyectos">
             <table class="table table-rb-#rgb(255, 226, 146)">
                 <thead>
                     <tr>
@@ -16,28 +16,27 @@
                 <tbody>
                     <tr>
                         <td>
-                            <p>Nombre del Proyecto</p>
+                            <p>{{proyecto.nombre}}</p>
                         </td>
                         <td colspan="2">
-                            <p>Descripción Lorem ipsum dolor sit ametne deleniti magni temporibus voluptates
-                                harum exercitationem, sequi labore suscipit natus! Eum</p>
+                            <p>{{proyecto.descripcion}}</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>2014</p>
+                            <p>{{proyecto.inicio}}</p>
                         </td>
                         <td>
-                            <p>2015</p>
+                            <p>{{proyecto.final}}</p>
                         </td>
                         <td>
-                            <p>Imagen</p>
+                          <img [src]="proyecto.imagen">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="4">
                             <a href="">
-                                <P>https://wwwProyecto1.com/blablabla/12345/blalbalballablab/123</P>
+                                <P>{{proyecto.link}}</P>
                             </a>
                         </td>
                     </tr>

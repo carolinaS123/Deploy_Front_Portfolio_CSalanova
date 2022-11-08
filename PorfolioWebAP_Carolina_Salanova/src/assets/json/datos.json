@@ -1,0 +1,128 @@
+{
+    "nombre": "Carolina",
+    "apellido": "Salanova",
+    "titulo": "**Web Full Stack student**",
+    "acerca_de": "Soy estudiante de programación web asdasdasdasdasdasdadasdasd dasdasd asdasdasd",
+    "url_foto": "./assets/AvatarMaker.png",
+    "url_banner": "./assets/banner1.png",
+    "experiencias": [
+        {
+            "id": 1,
+            "empresa": "Aurion casa editora",
+            "puesto": "dibujante",
+            "inicio": "1999-01-03",
+            "final": "2000-11-27",
+            "descripcion": "Dibujante de tematica biblica"
+        },
+        {
+            "id": 2,
+            "empresa": "Estudio sg",
+            "puesto": "Dibujante e ilustradora digital",
+            "inicio": "2001-02-21",
+            "final": "2016-02-10",
+            "descripcion": "Emprendimiento propio dibujos para publicidad, eventos, historietas, estampado de remeras, etc."
+        },
+        {
+            "id": 3,
+            "empresa": "Historieta Patagónica, La Duendes",
+            "puesto": "Historietista",
+            "inicio": "2008-02-14",
+            "final": "2010-10-05",
+            "descripcion": "Editorial de Chubut que publicaba para todo el pais, en grafica e historieta web."
+        },
+        {
+            "id": 4,
+            "empresa": "Asociación Solidaria Itati",
+            "puesto": "Tallerista de dibujo",
+            "inicio": "2017-10-18",
+            "final": "2020-03-14",
+            "descripcion": "Dictado de taller de dibujo de historieta para niños"
+        }
+    ],
+    "educaciones": [
+        {
+            "id": 1,
+            "institucion": "Instituto Universitario Patagonico de las Artes",
+            "titulacion": "Cine y Nuevos Medios",
+            "inicio": "1997-03-12",
+            "final": "1998-11-21",
+            "descripcion": "Carrera terciaria de cine que aplicaba las primeras tecnologías de multimedios"
+        },
+        {
+            "id": 2,
+            "institucion": "Instituto Superior Santo Domingo",
+            "titulacion": "Tecnicatura Superior en Analisis de Sistemas",
+            "inicio": "2015-03-14",
+            "final": "2015-11-26",
+            "descripcion": "1 semestre aprobado, tuve que dejar por motivos de salud"
+        },
+        {
+            "id": 3,
+            "institucion": "Centro de formación profesional n° 31 - Nqn",
+            "titulacion": "Programador de 364 horas reloj",
+            "inicio": "2020-03-10",
+            "final": "2020-11-20",
+            "descripcion": "Capacitación en programación básica con Java, Resolución 289/2016"
+        },
+        {
+            "id": 4,
+            "institucion": "Argentina Programa #YoProgramo 3.0",
+            "titulacion": "web fullstack junior",
+            "inicio": "2022-06-10",
+            "final": "2023-01-15",
+            "descripcion": "Capacitación para web fullstack junior en curso"
+        }
+    ],
+    "skills": [
+        {
+            "id": 0,
+            "skill": "JS",
+            "porcentaje": "15"
+        },
+        {
+            "id": 1,
+            "skill": "Html",
+            "porcentaje": "25"
+        },
+        {
+            "id": 2,
+            "skill": "Angular",
+            "porcentaje": "20"
+        },
+        {
+            "id": 3,
+            "skill": "Bootstrap",
+            "porcentaje": "25"
+        },
+        {
+            "id": 4,
+            "skill": "Java",
+            "porcentaje": "40"
+        },
+        {
+            "id": 5,
+            "skill": "Inglés técnico",
+            "porcentaje": "30"
+        }
+    ],
+    "proyectos": [
+        {
+            "id": 0,
+            "nombre": "Proyecto uno",
+            "descripcion": "Proyecto de prueba en java",
+            "inicio": "2021-08-21",
+            "final": "2021-09-18",
+            "imagen": "./assets/proyecto1.png",
+            "link": "https//proyectos.com/proyecto_1/ttttt/rrrrr"
+        },
+        {
+            "id": 1,
+            "nombre": "Proyecto dos",
+            "descripcion": "Segundo proyecto de prueba en Angular",
+            "inicio": "2022-07-20",
+            "final": "2022-09-12",
+            "imagen": "./assets/proyecto1.png",
+            "link": "https//proyectos.com/proyecto_2/ttttt/rrrrr"
+        }
+    ]
+}

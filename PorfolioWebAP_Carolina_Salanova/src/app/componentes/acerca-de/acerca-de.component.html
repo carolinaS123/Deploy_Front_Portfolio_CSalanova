@@ -4,16 +4,14 @@
       <div class="d-flex p-2 bd-highlight">
          <div class="flex-shrink-0">
             <img class="img-responsive rounded-circle" id="imagenPerfil"
-               src="../../../assets/AvatarMaker.png"
+               [src]="url_foto"
                alt="...">
          </div>
          <div class="flex-grow-1 ms-3">
-            <h3 small class="text-muted bg-dark  p-2 bg-opacity-10">Carolina Salanova</h3>
-            <h5>Full Stack Developer student</h5>
+            <h3 small class="text-muted bg-dark  p-2 bg-opacity-10">{{nombre}} {{apellido}}</h3>
+            <h5>{{titulo}}</h5>
             <br>
-            <h4 small class="bg-dark p-2 bg-opacity-10">Acerca de mi</h4>
-            <p>Decripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident hic aut ea,
-               minima optio quasi ducimus repellendus</p>
+            <h5>{{acerca_de}}</h5>
          </div>
          <div class="flex-grow-1 ms-3">
          </div>

@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { DatosPorfolioService } from './servicios/datos-porfolio.service';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './componentes/banner/banner.component';
@@ -33,6 +37,7 @@ import { AddModalExperienciaComponent } from './componentes/modals/add-modal-exp
 import { AddModalEducacionComponent } from './componentes/modals/add-modal-educacion/add-modal-educacion.component';
 import { AddModalSkillComponent } from './componentes/modals/add-modal-skill/add-modal-skill.component';
 import { AddModalProyectoComponent } from './componentes/modals/add-modal-proyecto/add-modal-proyecto.component';
+
 
 @NgModule({
   declarations: [
@@ -71,7 +76,9 @@ import { AddModalProyectoComponent } from './componentes/modals/add-modal-proyec
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgCircleProgressModule.forRoot({})
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

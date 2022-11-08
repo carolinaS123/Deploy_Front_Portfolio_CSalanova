@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
 
 @Component({
   selector: 'app-educacion',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
+  //Se inicializa el array no las variables de instancias
+  educaciones:any=[];
 
-  constructor() { }
+  constructor(private datosPorfolioService: DatosPorfolioService) { }
 
   ngOnInit(): void {
+    this.datosPorfolioService.getDataPorfolio().subscribe(datos => {
+      //Definir info a mostrar
+      this.educaciones = datos.educaciones;
+    });
   }
 
 }

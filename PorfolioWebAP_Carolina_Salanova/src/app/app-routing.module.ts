@@ -6,9 +6,9 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 
 
 const routes: Routes = [
-   {path: 'inicio', component:InicioComponent}, //siempre va primero esta ruta, el oreden aqui es importante
+   {path: '', component:InicioComponent}, //siempre va primero esta ruta, el oreden aqui es importante
    {path: 'dashboard', component:DashboardComponent}, //es para linkear al dashboard, ir a esa pagina y poder volver
-   {path: '', redirectTo: '/inicio', pathMatch:'full'},
+  
    {path: '**', component:ErrorComponent},
 ];
  

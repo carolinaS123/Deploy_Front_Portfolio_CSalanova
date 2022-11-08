@@ -5,7 +5,7 @@
         <h4>Educación</h4>
       </div>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive" *ngFor="let educacion of educaciones">
       <table class="table table-responsive table-rb- ">
         <thead>
           <tr>
@@ -15,22 +15,21 @@
         <tbody>
           <tr>
             <td>
-              <p>Institución</p>
+              <p>{{educacion.id}}- {{educacion.institucion}}</p>
             </td>
             <td>
-              <p>Carrera/Curso/Titulación</p>
+              <p>{{educacion.titulacion}}</p>
             </td>
             <td>
-              <p>Desde</p>
+              <p>{{educacion.inicio}}</p>
             </td>
             <td>
-              <p>Hasta</p>
+              <p>{{educacion.final}}</p>
             </td>
           </tr>
           <tr>
             <td colspan="4">
-              <P>Decripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident hic aut ea,
-                minima optio quasi ducimus repellendus</P>
+              <P>{{educacion.descripcion}}</P>
             </td>
           </tr>
         </tbody>
