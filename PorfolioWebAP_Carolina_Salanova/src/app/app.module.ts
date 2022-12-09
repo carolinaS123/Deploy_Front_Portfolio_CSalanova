@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { DatosPorfolioService } from './servicios/datos-porfolio.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -72,11 +73,13 @@ import { AddModalProyectoComponent } from './componentes/modals/add-modal-proyec
     AddModalEducacionComponent,
     AddModalSkillComponent,
     AddModalProyectoComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule,FormsModule, 
+    ReactiveFormsModule, 
     NgCircleProgressModule.forRoot({})
     
   ],

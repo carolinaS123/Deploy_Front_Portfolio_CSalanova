@@ -10,33 +10,33 @@
             "id": 1,
             "empresa": "Aurion casa editora",
             "puesto": "dibujante",
-            "inicio": "1999-01-03",
-            "final": "2000-11-27",
-            "descripcion": "Dibujante de tematica biblica"
+            "inicio_exp": "1999-01-03",
+            "fin_exp": "2000-11-27",
+            "descripcion_exp": "Dibujante de tematica biblica"
         },
         {
             "id": 2,
             "empresa": "Estudio sg",
             "puesto": "Dibujante e ilustradora digital",
-            "inicio": "2001-02-21",
-            "final": "2016-02-10",
-            "descripcion": "Emprendimiento propio dibujos para publicidad, eventos, historietas, estampado de remeras, etc."
+            "inicio_exp": "2001-02-21",
+            "fin_exp": "2016-02-10",
+            "descripcion_exp": "Emprendimiento propio dibujos para publicidad, eventos, historietas, estampado de remeras, etc."
         },
         {
             "id": 3,
             "empresa": "Historieta Patagónica, La Duendes",
             "puesto": "Historietista",
-            "inicio": "2008-02-14",
-            "final": "2010-10-05",
-            "descripcion": "Editorial de Chubut que publicaba para todo el pais, en grafica e historieta web."
+            "inicio_exp": "2008-02-14",
+            "fin_exp": "2010-10-05",
+            "descripcion_exp": "Editorial de Chubut que publicaba para todo el pais, en grafica e historieta web."
         },
         {
             "id": 4,
             "empresa": "Asociación Solidaria Itati",
             "puesto": "Tallerista de dibujo",
-            "inicio": "2017-10-18",
-            "final": "2020-03-14",
-            "descripcion": "Dictado de taller de dibujo de historieta para niños"
+            "inicio_exp": "2017-10-18",
+            "fin_exp": "2020-03-14",
+            "descripcion_exp": "Dictado de taller de dibujo de historieta para niños"
         }
     ],
     "educaciones": [
@@ -44,33 +44,33 @@
             "id": 1,
             "institucion": "Instituto Universitario Patagonico de las Artes",
             "titulacion": "Cine y Nuevos Medios",
-            "inicio": "1997-03-12",
-            "final": "1998-11-21",
-            "descripcion": "Carrera terciaria de cine que aplicaba las primeras tecnologías de multimedios"
+            "inicio_edu": "1997-03-12",
+            "fin_edu": "1998-11-21",
+            "descripcion_edu": "Carrera terciaria de cine que aplicaba las primeras tecnologías de multimedios"
         },
         {
             "id": 2,
             "institucion": "Instituto Superior Santo Domingo",
             "titulacion": "Tecnicatura Superior en Analisis de Sistemas",
-            "inicio": "2015-03-14",
-            "final": "2015-11-26",
-            "descripcion": "1 semestre aprobado, tuve que dejar por motivos de salud"
+            "inicio_edu": "2015-03-14",
+            "fin_edu": "2015-11-26",
+            "descripcion_edu": "1 semestre aprobado, tuve que dejar por motivos de salud"
         },
         {
             "id": 3,
             "institucion": "Centro de formación profesional n° 31 - Nqn",
             "titulacion": "Programador de 364 horas reloj",
-            "inicio": "2020-03-10",
-            "final": "2020-11-20",
-            "descripcion": "Capacitación en programación básica con Java, Resolución 289/2016"
+            "inicio_edu": "2020-03-10",
+            "fin_edu": "2020-11-20",
+            "descripcion_edu": "Capacitación en programación básica con Java, Resolución 289/2016"
         },
         {
             "id": 4,
             "institucion": "Argentina Programa #YoProgramo 3.0",
             "titulacion": "web fullstack junior",
-            "inicio": "2022-06-10",
-            "final": "2023-01-15",
-            "descripcion": "Capacitación para web fullstack junior en curso"
+            "inicio_edu": "2022-06-10",
+            "fin_edu": "2023-01-15",
+            "descripcion_edu": "Capacitación para web fullstack junior en curso"
         }
     ],
     "skills": [
@@ -108,19 +108,19 @@
     "proyectos": [
         {
             "id": 0,
-            "nombre": "Proyecto uno",
-            "descripcion": "Proyecto de prueba en java",
-            "inicio": "2021-08-21",
-            "final": "2021-09-18",
+            "nombre_proy": "Proyecto uno",
+            "descripcion_proy": "Proyecto de prueba en java",
+            "inicio_proy": "2021-08-21",
+            "fin_proy": "2021-09-18",
             "imagen": "./assets/proyecto1.png",
             "link": "https//proyectos.com/proyecto_1/ttttt/rrrrr"
         },
         {
             "id": 1,
-            "nombre": "Proyecto dos",
-            "descripcion": "Segundo proyecto de prueba en Angular",
-            "inicio": "2022-07-20",
-            "final": "2022-09-12",
+            "nombre_proy": "Proyecto dos",
+            "descripcion_proy": "Segundo proyecto de prueba en Angular",
+            "inicio_proy": "2022-07-20",
+            "fin_proy": "2022-09-12",
             "imagen": "./assets/proyecto1.png",
             "link": "https//proyectos.com/proyecto_2/ttttt/rrrrr"
         }
