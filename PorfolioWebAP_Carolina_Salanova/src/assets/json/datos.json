@@ -5,6 +5,9 @@
     "acerca_de": "Soy estudiante de programación web asdasdasdasdasdasdadasdasd dasdasd asdasdasd",
     "url_foto": "./assets/AvatarMaker.png",
     "url_banner": "./assets/banner1.png",
+    "name_usuario":"",
+    "email":"",
+    "password":"",
     "experiencias": [
         {
             "id": 1,
