@@ -32,7 +32,12 @@
     margin-top: 3px;
     margin-right: 1px;
 }
-
+.botonAdd:hover{
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    -khtml-opacity: 0.5;
+ }
 /*Texto responsive*/
 h3 h4 h5 {
     font-size: 1rem;

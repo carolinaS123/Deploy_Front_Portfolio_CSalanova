@@ -1,8 +1,9 @@
+
 {
-    "nombre": "Carolina",
-    "apellido": "Salanova",
-    "titulo": "**Web Full Stack student**",
-    "acerca_de": "Soy estudiante de programación web asdasdasdasdasdasdadasdasd dasdasd asdasdasd",
+    "nombre": "",
+    "apellido": "",
+    "titulo": "",
+    "acerca_de": "",
     "url_foto": "./assets/AvatarMaker.png",
     "url_banner": "./assets/banner1.png",
     "name_usuario":"",
@@ -57,7 +58,7 @@
             "titulacion": "Tecnicatura Superior en Analisis de Sistemas",
             "inicio_edu": "2015-03-14",
             "fin_edu": "2015-11-26",
-            "descripcion_edu": "1 semestre aprobado, tuve que dejar por motivos de salud"
+            "descripcion_edu": "Un semestre aprobado, tuve que dejar por motivos de salud"
         },
         {
             "id": 3,
@@ -80,32 +81,32 @@
         {
             "id": 0,
             "skill": "JS",
-            "porcentaje": "15"
+            "porcentaje": 16
         },
         {
             "id": 1,
             "skill": "Html",
-            "porcentaje": "25"
+            "porcentaje": 28
         },
         {
             "id": 2,
             "skill": "Angular",
-            "porcentaje": "20"
+            "porcentaje": 20
         },
         {
             "id": 3,
             "skill": "Bootstrap",
-            "porcentaje": "25"
+            "porcentaje": 26
         },
         {
             "id": 4,
             "skill": "Java",
-            "porcentaje": "40"
+            "porcentaje": 40
         },
         {
             "id": 5,
             "skill": "Inglés técnico",
-            "porcentaje": "30"
+            "porcentaje": 30
         }
     ],
     "proyectos": [
@@ -129,3 +130,4 @@
         }
     ]
 }
+

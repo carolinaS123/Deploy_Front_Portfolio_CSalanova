@@ -22,6 +22,12 @@
    position: absolute;
    z-index: 1!important;
 }
+.botonAdd:hover{
+   filter:alpha(opacity=50);
+   -moz-opacity: 0.5;
+   opacity: 0.5;
+   -khtml-opacity: 0.5;
+}
 #lapiz{
    position:absolute;
    z-index: 2!important;

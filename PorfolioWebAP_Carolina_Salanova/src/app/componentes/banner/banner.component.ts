@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
+import { Persona } from 'src/app/modelos/persona';
+import { PersonaService } from 'src/app/servicios/persona.service';
+import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-banner',
@@ -8,15 +10,30 @@ import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
 })
 export class BannerComponent implements OnInit {
   //Variables de instancia
-  url_banner:string="";
+  persona: Persona = new Persona("", "", "", "", "", "", "", "", "");
+  modoEdit:any;
+  url_banner:any="";
 
-  constructor(private datosPorfolioService: DatosPorfolioService) { }
+
+  constructor(private personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.datosPorfolioService.getDataPorfolio().subscribe(datos =>{
-      console.log(datos);
+
+    this.personaService.getPersona().subscribe(data =>{this.persona=data});
+  
+    if(sessionStorage.getItem('CurrentUser') == "null"){
+        this.modoEdit = false;
+    }else if(sessionStorage.getItem('currentUser') == null){
+       this.modoEdit=false;
+    }else{
+       this.modoEdit=true;
+    }
+    /*
+    this.porfolioService.getDataPorfolio().subscribe(data =>{
+      console.log("Imagen del banner"+(data));
       this.url_banner=datos.url_banner;
     });
+    */
   }
 
 }

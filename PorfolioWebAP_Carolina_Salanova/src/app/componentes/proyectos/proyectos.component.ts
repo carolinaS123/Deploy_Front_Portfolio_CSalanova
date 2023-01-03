@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
+import { ProyectosService } from 'src/app/servicios/proyectos.service'; 
+import { ProyectosModelo } from 'src/app/modelos/proyectosModelo'; 
 
 @Component({
   selector: 'app-proyectos',
@@ -7,15 +8,24 @@ import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  proyectos:any=[];
+  //isLogged = false;
+  listaProyectos:any=[];
+  modoEdit:any;
 
-  constructor(private datosPorfolioService: DatosPorfolioService) { }
+  constructor(private proyectosService:ProyectosService) { }
 
   ngOnInit(): void {
-    this.datosPorfolioService.getDataPorfolio().subscribe(datos =>{
-      //Definir info a mostrar
-      this.proyectos=datos.proyectos;
-    });
+   this.proyectosService.mostrarListaProyectos().subscribe(data =>{this.listaProyectos=data;
+   
+    if(sessionStorage.getItem('CurrentUser') == "null"){
+      this.modoEdit = false;
+    }else if(sessionStorage.getItem('currentUser') == null){
+      this.modoEdit=false;
+    }else{
+      this.modoEdit=true;
+    }
+  });
+    
   }
 
 }

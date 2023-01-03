@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
+import { EducacionModelo } from 'src/app/modelos/educacionModelo';
+import { EducacionService } from 'src/app/servicios/educacion.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-educacion',
@@ -7,16 +9,28 @@ import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  //Se inicializa el array no las variables de instancias
-  educaciones:any=[];
+  //isLogged = false;
+  educaciones:EducacionModelo[]=[];
+  modoEdit:any;
 
-  constructor(private datosPorfolioService: DatosPorfolioService) { }
+  constructor(private educacionService:EducacionService) { }
 
   ngOnInit(): void {
-    this.datosPorfolioService.getDataPorfolio().subscribe(datos => {
-      //Definir info a mostrar
-      this.educaciones = datos.educaciones;
-    });
+    this.cargarEducacion();
+
+    if(sessionStorage.getItem('CurrentUser') == "null"){
+        this.modoEdit = false;
+    }else if(sessionStorage.getItem('currentUser') == null){
+       this.modoEdit=false;
+    }else{
+       this.modoEdit=true;
+    }
+  };
+  
+  cargarEducacion():void{
+    this.educacionService. mostrarListaEducacion().subscribe(data=>{this.educaciones=data});
   }
 
+
 }
+

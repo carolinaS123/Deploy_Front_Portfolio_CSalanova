@@ -4,6 +4,11 @@
       <div class="col-md-10">
         <h4>Educación</h4>
       </div>
+      <div class="col-md-2">
+        <div>
+          <button type="button" class="btn btn-dark btn-sm, botonAdd" routerLink="/addEducacion/">Agregar+</button>
+        </div> 
+      </div>
     </div>
     <div class="table-responsive" *ngFor="let educacion of educaciones">
       <table class="table table-responsive table-rb- ">
@@ -26,6 +31,22 @@
             <td>
               <p>{{educacion.fin_edu}}</p>
             </td>
+          <div >
+            <td>
+              <button type="submit" class="btn btn-close-white btn-sm, botonAdd">
+                <img class="botonEfecto"
+                src="../assets/edit.png"
+                id="editar" >
+              </button>
+            </td>
+            <td>
+              <button type="submit" class="btn btn-close-white btn-sm, botonAdd">
+                <img class="nav-menu-link-img"
+                  src="../assets/delete.png"
+                  id="borrar">
+              </button>
+            </td>
+          </div>
           </tr>
           <tr>
             <td colspan="4">

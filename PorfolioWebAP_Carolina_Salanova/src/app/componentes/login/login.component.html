@@ -1,0 +1,59 @@
+<!-- Section: Design Block -->
+<div id="componenteLogin" class="background-radial-gradient overflow-hidden">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+            Login<br />
+            <span style="color: hsl(218, 81%, 75%)">Por favor ingrese sus datos para iniciar sesión</span>
+          </h1>
+          <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+     
+          </p>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+  
+          <div class="card bg-glass">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3"  formControlName="email" [class.border-danger]="EmailValid">
+                  <label class="form-label" for="form3Example3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</label>
+
+                  <!-- Gracias al getter que configuramos en el controlador -->
+                  <div *ngIf="Email?.errors  && Email?.touched">
+                        <p *ngIf="Email?.hasError('required')" class="error">
+                            El email es requerido.
+                        </p>
+                        <p *ngIf="Email?.hasError('email')" class="error">
+                            El formato del email debe ser válido.
+                        </p>
+                   </div>
+                </div>
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4" formControlName="password" [class.border-danger]="PasswordValid">
+                  <label class="form-label" for="exampleInputPassword1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password</label>
+
+                   <!-- Gracias al getter que configuramos en el controlador -->
+                   <div *ngIf="Password?.errors  && Password?.touched">
+                        <p *ngIf="Password?.hasError('required')" class="error">
+                            El password es requerido.
+                        </p>
+                      
+                    </div>  
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-dark btn-sm">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+ 

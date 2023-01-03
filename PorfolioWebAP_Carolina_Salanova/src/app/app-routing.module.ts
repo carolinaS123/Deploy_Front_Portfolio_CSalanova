@@ -1,15 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { ErrorComponent } from './componentes/error/error.component';
-import { InicioComponent } from './componentes/inicio/inicio.component';
+import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { GuardGuard } from './servicios/guard.guard';
+import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
+import { AddEducacionComponent } from './componentes/add-educacion/add-educacion.component';
+import { EditSkillComponent } from './componentes/edit-skill/edit-skill.component';
+import { AddSkillComponent } from './componentes/add-skill/add-skill.component';
 
 
 const routes: Routes = [
-   {path: '', component:InicioComponent}, //siempre va primero esta ruta, el oreden aqui es importante
-   {path: 'dashboard', component:DashboardComponent}, //es para linkear al dashboard, ir a esa pagina y poder volver
-  
+   {path: '', component:PorfolioComponent}, //siempre va primero esta ruta, el orden aqui es importante
+   {path: 'login', component:LoginComponent},//rutea al componente login
+   //{path:'',redirectTo:'login',pathMatch:'full'},
+   {path: 'porfolio', component:PorfolioComponent, canActivate:[GuardGuard]},
+   {path: 'addExperiencia', component:AddExperienciaComponent},
+   {path: 'addEducacion', component:AddEducacionComponent},
+   {path: 'addSkill', component:AddSkillComponent},
+   {path: 'editSkill', component:EditSkillComponent},
    {path: '**', component:ErrorComponent},
+  
 ];
  
 @NgModule({

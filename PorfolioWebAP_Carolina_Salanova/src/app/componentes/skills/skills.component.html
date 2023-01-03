@@ -5,19 +5,45 @@
         <div class="col-md-10">
           <h4>Skills</h4>
         </div>
+        <div class="col-md-2">
+          <div *ngIf="modoEdit">
+            <button type="button" class="btn btn-dark btn-sm, botonAdd" routerLink="/addSkill/">Agregar+</button>
+          </div> 
+        </div>
       </div>
-      <div class="table-responsive" *ngFor="let habilidad of skills">
+      <div class="table-responsive" *ngFor="let skill of skills">
         <table class="table table-responsive table-rb-#rgb(255, 226, 146)">
           <tbody>
+            <tr>
+              <td>
+                <div>
+                  <p>{{skill.skill}}</p>
+                </div>
+              </td>
+            </tr>
             <tr>
               <td colspan="12" id="barras">
                 <div class="progress">
                   <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"[ngClass]="" role="progressbar"
-                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width.%]="habilidad.porcentaje">
-                    {{habilidad.porcentaje}}% {{habilidad.skill}}
-                  </div>
+                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width.%]="skill.porcentaje">
+                    {{skill.porcentaje}}% 
+                </div>
                 </div>
               </td>
+              <div *ngIf="modoEdit">
+              <td colspan="1">
+                <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editSkill/">
+                  <img class="botonEfecto"
+                  src="../assets/edit.png"
+                  id="editar" >
+                </button>
+                &nbsp;
+                <a type="button" class="btn-borrar, btn btn-close-white btn-sm, botonAdd">
+                  <img class="nav-menu-link-img"
+                    src="../assets/delete.png" id="borrar" (click)="borrarSkill(skill.id)">
+                </a>
+              </td>
+              </div>
             </tr>
           </tbody>
         </table>

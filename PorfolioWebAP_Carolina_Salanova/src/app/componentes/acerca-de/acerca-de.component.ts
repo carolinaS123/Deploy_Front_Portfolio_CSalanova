@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
+//import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
+import { Persona } from 'src/app/modelos/persona';
+import { PersonaService } from 'src/app/servicios/persona.service';
+import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-acerca-de',
@@ -8,24 +11,21 @@ import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
 })
 export class AcercaDeComponent implements OnInit {
 //Variables de instancia
-  nombre:string="";
-  apellido:string="";
-  titulo:string="";
-  acerca_de:string="";
-  url_foto:string="";
+  persona: Persona = new Persona("", "", "", "", "", "", "", "", "");
+  modoEdit:any;
+  
+  constructor(public personaService: PersonaService) { }
 
-  constructor(private datosPorfolioService: DatosPorfolioService) { }
-
-  ngOnInit(): void {
-    this.datosPorfolioService.getDataPorfolio().subscribe(datos =>{
-      console.log(datos);
-      //Definir info a mostrar
-      this.nombre=datos.nombre;
-      this.apellido=datos.apellido;
-      this.titulo=datos.titulo;
-      this.acerca_de=datos.acerca_de;
-      this.url_foto=datos.url_foto;
-    });
+  ngOnInit(): void {                                         //Definir info a mostrar
+    this.personaService.getPersona().subscribe(data =>{this.persona=data;});
+  
+    if(sessionStorage.getItem('CurrentUser') == "null"){
+        this.modoEdit = false;
+    }else if(sessionStorage.getItem('currentUser') == null){
+       this.modoEdit=false;
+    }else{
+       this.modoEdit=true;
+    }
   }
 
 }

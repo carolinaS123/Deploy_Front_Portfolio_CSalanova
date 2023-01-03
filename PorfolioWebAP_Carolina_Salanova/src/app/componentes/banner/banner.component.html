@@ -1,7 +1,12 @@
-    <!--header Banner -->
-    <header>
-      <div class="contenedor">
-        <img class="img-fluid"
-          [src]="url_banner" id="banner1">
+<!--header Banner -->
+<header>
+  <div class="contenedor">
+     <img class="img-fluid"
+        src="{{persona.url_banner}}" id="banner1">
+      <div *ngIf="modoEdit">
+         <button type="submit" class="btn btn-close-dar btn-sm, botonAdd">
+         <img class="botonEfecto"src="../assets/edit.png"id="editar" >
+         </button>
       </div>
-    </header>
+  </div>
+</header>
