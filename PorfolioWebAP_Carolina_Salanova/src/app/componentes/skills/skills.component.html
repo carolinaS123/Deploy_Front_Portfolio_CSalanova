@@ -32,13 +32,12 @@
               </td>
               <div *ngIf="modoEdit">
               <td colspan="1">
-                <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editSkill/">
+                <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editSkill/{{skill.id}}">
                   <img class="botonEfecto"
-                  src="../assets/edit.png"
-                  id="editar" >
+                  src="../assets/edit.png">
                 </button>
                 &nbsp;
-                <a type="button" class="btn-borrar, btn btn-close-white btn-sm, botonAdd">
+                <a type="submit" class="btn-borrar, btn btn-close-white btn-sm, botonAdd">
                   <img class="nav-menu-link-img"
                     src="../assets/delete.png" id="borrar" (click)="borrarSkill(skill.id)">
                 </a>

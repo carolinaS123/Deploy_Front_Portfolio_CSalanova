@@ -1,5 +1,5 @@
 export class Persona {
-    id?: number;
+    id: number;
     nombre : String;
     apellido : String;
     titulo : String;

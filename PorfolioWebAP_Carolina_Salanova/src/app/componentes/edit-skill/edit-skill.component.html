@@ -1,28 +1,42 @@
 <div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label"><h1>Edite el skill</h1></label>
-    <div class="row">
-        <div class="col-12 order-first">
-            <div class="mb-3">
-                <label for="formFileSm" class="form-label"><h5>skill</h5></label>
-                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                    aria-label=".form-control-sm example">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 order-first">
-            <div class="mb-3">
-                <label for="formFileSm" class="form-label"><h5>Porcentaje</h5></label>
-                <input class="form-control form-control-sm" type="number" placeholder=".form-control-sm"
-                    aria-label=".form-control-sm example">
-            </div>
-        </div>
-    </div>
-    <div class="row d-flex">
-        <div class="col-12 d-flex justify-content-end">
-            <div class="mb-3 float-right">
-                <button type="button" class="btn btn-dark btn-sm" routerLink="/editSkill/">Editar skill</button>
+    <div class="contenedor">
+        <div class="d-flex p-2 bd-highlight">
+            <div class="flex-shrink-0">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="mb-3">
+                        <label class="form-label">
+                            <h1>Edite el skill</h1>
+                            <h1></h1>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3" class="form-group">
+                            <label for="skill">
+                                <h5>Skill</h5>
+                            </label>
+                            <input type="text" class="form-control" id="skill" name="skill"
+                                [(ngModel)]="skillsModelo.skill" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3" class="form-group">
+                            <label for="porcentaje">
+                                <h5>Porcentaje</h5>
+                            </label>
+                            <input type="number" class="form-control" id="porcentaje" name="porcentaje"
+                                [(ngModel)]="skillsModelo.porcentaje" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <div class="mb-3">
+                                <br>
+                                <button type="submit" class="btn btn-dark btn-sm">Limpiar</button>&nbsp;
+                                <button type="submit" class="btn btn-dark btn-sm">Editar skill</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

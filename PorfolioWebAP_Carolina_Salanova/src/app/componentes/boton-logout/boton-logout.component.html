@@ -1,5 +1,4 @@
 <!--boton logout-->
-<a type="button" class="iconos" data-bs-target="#modalLogout" data-bs-toggle="modal">
-    <img class="nav-menu-link-img" src="./assets/unlock.png" id="desbloqueado">
+<a type="button" href="" class="iconos">
+    <img class="nav-menu-link-img" src="./assets/unlock.png" id="desbloqueado" *ngIf="modoEdit" (click)="logout()">
 </a>
-<app-modal-logout></app-modal-logout>

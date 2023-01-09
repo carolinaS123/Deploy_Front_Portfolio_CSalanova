@@ -1,67 +1,74 @@
 <div>
-    <div class="row">
-        <div class="mb-3">
-           <form   >
-            <!--(ngSubmit)="onUpdate()" novalidate #f="ngForm" *ngFor="let educacion of educaciones"-->
-                <label for="exampleInputEmail1" class="form-label">
-                <h1>Edite el estudio</h1>
-                </label>
-                <div class="col-10 order-first">
-                   <div class="mb-3">
-                        <label for="Institución" class="form-label">
-                            <h5>Institución</h5>
-                        </label>
-                        <input class="form-control form-control-sm" type="text" id="institucion" name="institucion"
-                            required placeholder="Nombre de la institucion"
-                            aria-label=".form-control-sm example">
-                    </div>
-                </div> 
-                 <div class="col-10 order-first">
-                       <div class="mb-3">
-                           <label for="formFileSm" class="form-label">
-                                 <h5>Carrera/Curso</h5>
-                           </label>
-                           <input class="form-control form-control-sm" type="text" id="titulacion" name="titulacionAdd"
-                            required placeholder="Nombre de la carrera o curso"
-                             aria-label=".form-control-sm example">
-                        </div>
-                 </div>
-                 <div class="col-10 order-first">
-                     <div class="mb-3">
-                        <label for="formFileSm" class="form-label">
-                             <h5>Desde</h5>
-                        </label>
-                        <input class="form-control form-control-sm" type="text" id="inicio_eduAdd" name="inicio_eduAdd"
-                             required placeholder="Inicio" aria-label=".form-control-sm example">
-                     </div>
-
-                  </div>
-                  <div class="col-10 order-first">
-                     <div class="mb-3">
-                          <label for="formFileSm" class="form-label">
-                             <h5>Hasta</h5>
-                           </label>
-                           <input class="form-control form-control-sm" type="text" id="fin_eduAdd" name="fin_eduAdd"
-                               required placeholder="Hasta" aria-label=".form-control-sm example">
-                       </div>
-                  </div>
-                  <div class="col-10 order-first">
-                        <div class="mb-3">
-                            <label for="formFileSm" class="form-label">
-                                 <h5>Descripción</h5>
+    <div class="contenedor">
+        <div class="d-flex p-2 bd-highlight">
+            <div class="flex-shrink-0">
+                <div class="row">
+                    <div class="mb-3">
+                        <form>
+                            <label for="exampleInputEmail1" class="form-label">
+                                <h1>Edite el estudio</h1>
                             </label>
-                           <textarea class="form-control form-control-sm" type="text" id="descripcion_eduAdd"
-                               name="descripcion_eduAdd"  required
-                               placeholder=" Descripcion carrera o curso" aria-label="With textarea"></textarea>
-                        </div>       
-                  </div>
-                  <!--Boton de guardado-->
-                   <div class="col-10 order-first">
-                        <div class="mb-3 float-right">
-                                <button type="button" class="btn btn-dark btn-sm">Editar educacion</button>
-                        </div>
+                            <div class="col-10 order-first">
+                                <div class="mb-3">
+                                    <label for="Institución" class="form-label">
+                                        <h5>Institución</h5>
+                                    </label>
+                                    <input class="form-control form-control-sm" type="text" id="institucion"
+                                        name="institucion" required placeholder="Nombre de la institucion"
+                                        aria-label=".form-control-sm example">
+                                </div>
+                            </div>
+                            <div class="col-10 order-first">
+                                <div class="mb-3">
+                                    <label for="formFileSm" class="form-label">
+                                        <h5>Carrera/Curso</h5>
+                                    </label>
+                                    <input class="form-control form-control-sm" type="text" id="titulacion"
+                                        name="titulacionAdd" required placeholder="Nombre de la carrera o curso"
+                                        aria-label=".form-control-sm example">
+                                </div>
+                            </div>
+                            <div class="col-10 order-first">
+                                <div class="mb-3">
+                                    <label for="formFileSm" class="form-label">
+                                        <h5>Desde</h5>
+                                    </label>
+                                    <input class="form-control form-control-sm" type="text" id="inicio_eduAdd"
+                                        name="inicio_eduAdd" required placeholder="Inicio"
+                                        aria-label=".form-control-sm example">
+                                </div>
+
+                            </div>
+                            <div class="col-10 order-first">
+                                <div class="mb-3">
+                                    <label for="formFileSm" class="form-label">
+                                        <h5>Hasta</h5>
+                                    </label>
+                                    <input class="form-control form-control-sm" type="text" id="fin_eduAdd"
+                                        name="fin_eduAdd" required placeholder="Hasta"
+                                        aria-label=".form-control-sm example">
+                                </div>
+                            </div>
+                            <div class="col-10 order-first">
+                                <div class="mb-3">
+                                    <label for="formFileSm" class="form-label">
+                                        <h5>Descripción</h5>
+                                    </label>
+                                    <textarea class="form-control form-control-sm" type="text" id="descripcion_eduAdd"
+                                        name="descripcion_eduAdd" required placeholder=" Descripcion carrera o curso"
+                                        aria-label="With textarea"></textarea>
+                                </div>
+                            </div>
+                            <!--Boton de guardado-->
+                            <div class="col-10 order-first">
+                                <div class="mb-3 float-right">
+                                    <button type="button" class="btn btn-dark btn-sm">Editar educacion</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-            </form>    
+                </div>
+            </div>
         </div>
-    </div>    
+    </div>
 </div>

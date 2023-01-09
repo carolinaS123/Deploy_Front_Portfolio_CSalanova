@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';//Para poder hacer peticiones
   providedIn: 'root'
 })
 export class PorfolioService {
-  url:String="http://localhost8080/ver/personas"
+  url:String="http://localhost8080/mostrar/personas"
 
   constructor(private http:HttpClient) { }
 

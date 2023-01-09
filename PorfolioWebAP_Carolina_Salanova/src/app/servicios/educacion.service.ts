@@ -14,20 +14,20 @@ export class EducacionService {
     return this.httpClient.get<EducacionModelo[]>(this.url +'mostrar');//Lista
   }
 
-  public crearEducacion(educacion: EducacionModelo):Observable<any>{
+  public crearEducacion(EducacionModelo: EducacionModelo):Observable<any>{
     return this.httpClient.post<any>(this.url +'crear', EducacionModelo);//save or create, add or new
   }
   
-  public editarEducacion(id: number, educacion:EducacionModelo):Observable<any>{
+  public editarEducacion(id: number, EducacionModelo:EducacionModelo):Observable<any>{
     return this.httpClient.put<any>(this.url + `editar/${id}`, EducacionModelo);//edit or update
   }
 
   public borrarEducacion({ id }: { id: number; }) :Observable<any>{
-    return this.httpClient.delete<any>(this.url + `/borrar/${id}`);//Delete
+    return this.httpClient.delete<any>(this.url + `borrar/${id}`);//Delete
   }
 
   public buscarEducacion(id:number):Observable<EducacionModelo[]>{
-    return this.httpClient.get<EducacionModelo[]>(this.url +`/buscar/${id}`);//Detail
+    return this.httpClient.get<EducacionModelo[]>(this.url +`buscar/${id}`);//Detail
   }
 
 }

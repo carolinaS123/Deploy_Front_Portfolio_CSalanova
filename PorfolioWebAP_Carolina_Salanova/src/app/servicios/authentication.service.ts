@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs'; 
+import { BotonLogoutComponent } from '../componentes/boton-logout/boton-logout.component';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,7 @@ export class AuthenticationService {
       headers: new HttpHeaders({'Content-Type':'application/json'})
     }
 
+
     return this.http.post<any>(this.url, credenciales, httpOptions).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       this.currentUserSubject.next(data);
@@ -27,9 +29,9 @@ export class AuthenticationService {
     }));
   }
 
-  
   get UsuarioAutenticado(){
     return this.currentUserSubject.value;
   }
   
+
 }

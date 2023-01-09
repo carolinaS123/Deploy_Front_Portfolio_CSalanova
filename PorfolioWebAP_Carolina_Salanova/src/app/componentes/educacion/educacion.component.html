@@ -5,7 +5,7 @@
         <h4>Educación</h4>
       </div>
       <div class="col-md-2">
-        <div>
+        <div *ngIf="modoEdit">
           <button type="button" class="btn btn-dark btn-sm, botonAdd" routerLink="/addEducacion/">Agregar+</button>
         </div> 
       </div>
@@ -31,7 +31,7 @@
             <td>
               <p>{{educacion.fin_edu}}</p>
             </td>
-          <div >
+            <div *ngIf="modoEdit">
             <td>
               <button type="submit" class="btn btn-close-white btn-sm, botonAdd">
                 <img class="botonEfecto"

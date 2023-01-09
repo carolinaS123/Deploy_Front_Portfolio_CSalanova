@@ -6,8 +6,9 @@
             </div>
             <div class="col-md-2">
                 <div *ngIf="modoEdit">
-                    <button type="button" class="btn btn-dark btn-sm, botonAdd" routerLink="/add-educacion">Agregar+</button>
-                  </div> 
+                    <button type="button" class="btn btn-dark btn-sm, botonAdd"
+                        routerLink="/add-proyecto">Agregar+</button>
+                </div>
             </div>
         </div>
         <div class="table-responsive" *ngFor="let proyecto of listaProyectos">
@@ -27,13 +28,12 @@
                             <p>{{proyecto.descripcion_proy}}</p>
                         </td>
                         <div *ngIf="modoEdit">
-                        <td>
-                            <a type="button" class="btn-editar">
-                              <img class="nav-menu-link-img"
-                                src="../assets/edit.png"
-                                id="editar">
-                            </a>
-                        </td>
+                            <td>
+                                <button type="submit" class="btn btn-close-white btn-sm, botonAdd"
+                                    routerLink="editProyecto{{proyecto.id}}">
+                                    <img class="botonEfecto" src="../assets/edit.png">
+                                </button>
+                            </td>
                         </div>
                     </tr>
                     <tr>
@@ -44,16 +44,14 @@
                             <p>{{proyecto.fin_proy | date:"dd-MM-yyyy"}}</p>
                         </td>
                         <td>
-                          <P>Link imagen proyecto:{{proyecto.imagen}}</P>
+                            <P>Link imagen proyecto:{{proyecto.imagen}}</P>
                         </td>
                         <div *ngIf="modoEdit">
-                        <td>
-                            <a type="button" class="btn-borrar">
-                              <img class="nav-menu-link-img"
-                                src="../assets/delete.png"
-                                id="borrar">
-                            </a>
-                        </td>
+                            <td>
+                                <a type="submit" class="btn-borrar, btn btn-close-white btn-sm, botonAdd">
+                                    <img class="nav-menu-link-img" src="../assets/delete.png" id="borrar">
+                                </a>
+                            </td>
                         </div>
                     </tr>
                     <tr>

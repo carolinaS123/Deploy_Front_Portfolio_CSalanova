@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
-import { Experiencia } from 'src/app/modelos/experiencia';
+import { ExperienciaModelo } from 'src/app/modelos/experienciaModelo';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ExperienciaComponent implements OnInit {
    //isLogged = false;
-   experiencias:Experiencia[]=[];
+   experiencias:ExperienciaModelo[]=[];
    modoEdit:any;
    
 

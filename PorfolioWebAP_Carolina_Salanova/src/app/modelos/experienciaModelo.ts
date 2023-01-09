@@ -1,13 +1,12 @@
-export class Experiencia {
-    id : number;
+export class ExperienciaModelo {
+    id: number;
     empresa : String;
     puesto : String;
     inicio_exp : String;
     fin_exp : String;
     descripcion_exp : String;
 
-    constructor(id:number, empresa:String, puesto:String, inicio_exp:String, fin_exp:String, descripcion_exp:String){
-        this.id = id;
+    constructor(empresa:String, puesto:String, inicio_exp:String, fin_exp:String, descripcion_exp:String){
         this.empresa = empresa;
         this.puesto = puesto;
         this.inicio_exp = inicio_exp;

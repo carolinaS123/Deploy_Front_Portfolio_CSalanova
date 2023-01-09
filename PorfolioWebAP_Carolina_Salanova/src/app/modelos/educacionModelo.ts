@@ -1,5 +1,5 @@
 export class EducacionModelo {
-    id!: number;
+    id: number;
     institucion : String;
     titulacion : String;
     inicio_edu : String;

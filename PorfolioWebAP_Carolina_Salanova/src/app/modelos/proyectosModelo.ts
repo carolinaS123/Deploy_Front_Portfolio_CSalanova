@@ -1,5 +1,5 @@
 export class ProyectosModelo {
-    id! : number;
+    id : number;
     nombre_proy : String;
     descripcion_proy : String;
     inicio_proy : String;

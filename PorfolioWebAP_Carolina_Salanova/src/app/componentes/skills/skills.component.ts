@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SkillsModelo } from 'src/app/modelos/skillsModelo';
 import { SkillsService } from 'src/app/servicios/skills.service';
+import { ActivatedRoute, Router } from '@angular/router';
 //import {Observable} from 'rxjs';
 
 @Component({
@@ -14,7 +15,7 @@ export class SkillsComponent implements OnInit {
   skills: SkillsModelo[]=[]; //aca se llama al modelo q es un array
   modoEdit:any;
 
-  constructor(private skillsService:SkillsService) { } //Inyecta el servicio para tener acceso en la clase a los metodos.
+  constructor(private skillsService:SkillsService, private router: Router) { } //Inyecta el servicio para tener acceso en la clase a los metodos.
 
   ngOnInit(): void {
     this.cargarSkills();
@@ -29,7 +30,7 @@ export class SkillsComponent implements OnInit {
   }
 
   cargarSkills():void{
-    this.skillsService.mostrarListaSkills().subscribe(data=>{
+    this.skillsService.mostrarListaSkills().subscribe((data)=>{
        this.skills=data;});
   }
 
@@ -38,14 +39,14 @@ export class SkillsComponent implements OnInit {
       this.skillsService.borrarSkill(id).subscribe(
         {
           next: data =>{ 
-         alert("Se pudo borrar el skill");
+          alert("Se pudo borrar el skill");
           this.cargarSkills(); 
-          window.location.reload();
-          } /*
+          }
           ,
           error: err =>{
-          alert("No se pudo borrar el skill");
-          }*/
+          alert("Se pudo borrar el skill");
+          this.cargarSkills(); 
+          }
        }
       )
     }
