@@ -35,7 +35,7 @@
          
             <div *ngIf="modoEdit">
             <td>
-              <button type="submit" class="btn btn-close-white btn-sm, botonAdd">
+              <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editExperiencia/">
                 <img class="botonEfecto"
                 src="../assets/edit.png"
                 id="editar" >
@@ -44,8 +44,7 @@
             <td>
               <button type="submit" class="btn btn-close-white btn-sm, botonAdd">
                 <img class="nav-menu-link-img"
-                  src="../assets/delete.png"
-                  id="borrar">
+                  src="../assets/delete.png" id="borrar" (click)="borrarExpe(experiencia.id)">
               </button>
             </td>
             </div>

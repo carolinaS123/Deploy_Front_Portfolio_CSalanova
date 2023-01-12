@@ -19,10 +19,6 @@ import { ErrorComponent } from './componentes/error/error.component';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { BotonLoginComponent } from './componentes/boton-login/boton-login.component';
 import { BotonLogoutComponent } from './componentes/boton-logout/boton-logout.component';
-import { BtnAddExperienciaComponent } from './componentes/btn-add-experiencia/btn-add-experiencia.component';
-import { BtnAddEducacionComponent } from './componentes/btn-add-educacion/btn-add-educacion.component';
-import { BtnAddSkillComponent } from './componentes/btn-add-skill/btn-add-skill.component';
-import { BtnAddProyectoComponent } from './componentes/btn-add-proyecto/btn-add-proyecto.component';
 import { Persona } from './modelos/persona';
 import { LoginComponent } from './componentes/login/login.component';
 import { PorfolioService } from './servicios/porfolio.service';
@@ -54,10 +50,6 @@ import { EditProyectoComponent } from './componentes/edit-proyecto/edit-proyecto
     PorfolioComponent,
     BotonLoginComponent,
     BotonLogoutComponent,
-    BtnAddExperienciaComponent,
-    BtnAddEducacionComponent,
-    BtnAddSkillComponent,
-    BtnAddProyectoComponent,
     LoginComponent,
     AddExperienciaComponent,
     EditExperienciaComponent,

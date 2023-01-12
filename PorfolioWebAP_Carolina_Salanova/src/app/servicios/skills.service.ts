@@ -12,18 +12,22 @@ export class SkillsService {
   constructor(private httpClient:HttpClient) { }
 
   public mostrarListaSkills():Observable<SkillsModelo[]>{
-    return this.httpClient.get<SkillsModelo[]>(this.url +'mostrar');//traer
+    return this.httpClient.get<SkillsModelo[]>(this.url +'mostrar');
   }
 
-  public crearSkill(SkillsModelo: SkillsModelo):Observable<any>{
-    return this.httpClient.post<any>(this.url +'crear', SkillsModelo);//save or create, add or new
+  public crearSkill(skillsModelo: SkillsModelo):Observable<any>{
+    return this.httpClient.post<any>(this.url +'crear', skillsModelo);
   }
-  
- // return this.httpClient.post<MyActualReturnType>(environment.ApiUrl + 'FrontEnd/SendOTP', otpReq)
 
-  public editarSkill(id:number, SkillsModelo: SkillsModelo):Observable<any>{
-    return this.httpClient.put<any>(this.url + `editar/${id}`, SkillsModelo);
+  public editarSkill(id:number, skillsModelo:SkillsModelo):Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, skillsModelo);
   }
+
+  /** 
+   *   public update(id: number, skill: Skill): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/${id}`, skill);
+  }
+  */
 
   public borrarSkill(id:number):Observable<any>{
     return this.httpClient.delete<any>(this.url + `borrar/${id}`);

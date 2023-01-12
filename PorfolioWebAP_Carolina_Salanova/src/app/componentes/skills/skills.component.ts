@@ -10,7 +10,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  //isLogged = false;
   //Se inicializa el array no las variables de instancias
   skills: SkillsModelo[]=[]; //aca se llama al modelo q es un array
   modoEdit:any;

@@ -16,6 +16,7 @@ import { AddProyectoComponent } from './componentes/add-proyecto/add-proyecto.co
 import { EditProyectoComponent } from './componentes/edit-proyecto/edit-proyecto.component';
 
 
+
 const routes: Routes = [
    {path: '', component:PorfolioComponent}, //siempre va primero esta ruta, el orden aqui es importante
    {path: 'login', component:LoginComponent},//rutea al componente login
@@ -29,8 +30,8 @@ const routes: Routes = [
    {path: 'editEducacion/:id', component:AddEducacionComponent},
    {path: 'addSkill', component:AddSkillComponent},
    {path: 'editSkill/:id', component:EditSkillComponent},
-   {path: 'addProyecto', component:AddSkillComponent},
-   {path: 'editProyecto/:id', component:EditSkillComponent},
+   {path: 'addProyecto', component:AddProyectoComponent},
+   {path: 'editProyecto/:id', component:EditProyectoComponent},
    {path: '**', component:ErrorComponent},
   
 ];

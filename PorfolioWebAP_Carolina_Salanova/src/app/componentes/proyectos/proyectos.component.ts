@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProyectosService } from 'src/app/servicios/proyectos.service'; 
 import { ProyectosModelo } from 'src/app/modelos/proyectosModelo'; 
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-proyectos',
@@ -9,13 +10,13 @@ import { ProyectosModelo } from 'src/app/modelos/proyectosModelo';
 })
 export class ProyectosComponent implements OnInit {
   //isLogged = false;
-  listaProyectos:any=[];
+  proyectos:ProyectosModelo[]=[];
   modoEdit:any;
 
-  constructor(private proyectosService:ProyectosService) { }
+  constructor(private proyectosService:ProyectosService, private router:Router) { }
 
   ngOnInit(): void {
-   this.proyectosService.mostrarListaProyectos().subscribe(data =>{this.listaProyectos=data;
+    this.cargarProyecto();
    
     if(sessionStorage.getItem('CurrentUser') == "null"){
       this.modoEdit = false;
@@ -24,8 +25,27 @@ export class ProyectosComponent implements OnInit {
     }else{
       this.modoEdit=true;
     }
-  });
-    
   }
 
+  cargarProyecto():void{
+     this.proyectosService.mostrarListaProyectos().subscribe(data =>{this.proyectos=data});
+  }
+  
+  borrarProyecto(id:number){
+    if(id != undefined){
+      this.proyectosService.borrarProyecto(id).subscribe(
+        {
+          next: data =>{ 
+          alert("Se pudo borrar el proyecto");
+          this.cargarProyecto(); 
+          }
+          ,
+          error: err =>{
+          alert("Se pudo borrar el proyecto");
+          this.cargarProyecto(); 
+          }
+       }
+      )
+    }
+  }
 }

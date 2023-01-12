@@ -1,42 +1,76 @@
-.error{
-    color:red
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/*Texto responsive*/
+h3 h4 h5 {
+  font-size: 1rem;
+}
+
+p {
+  font-weight: bold;
+}
+.botonAdd:hover{
+  filter:alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  -khtml-opacity: 0.5;
+}
+.d-flex {
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.contenedor {
+  background: linear-gradient(#a895d4, #392b72);
+  
+  height: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 1em;
+}
+.nav-menu-link-img{
+  padding: 2px;
+  height: 2em;
+}
+
+@media(max-width: 768px) {
+      .nav-menu-link-img{
+      height: 2rem;
   }
-  .background-radial-gradient {
-    background-color: hsl(218, 41%, 15%);
-    background-image: radial-gradient(650px circle at 0% 0%,
-        hsl(218, 41%, 35%) 15%,
-        hsl(218, 41%, 30%) 35%,
-        hsl(218, 41%, 20%) 75%,
-        hsl(218, 41%, 19%) 80%,
-        transparent 100%),
-      radial-gradient(1250px circle at 100% 100%,
-        hsl(218, 41%, 45%) 15%,
-        hsl(218, 41%, 30%) 35%,
-        hsl(218, 41%, 20%) 75%,
-        hsl(218, 41%, 19%) 80%,
-        transparent 100%);
+  h3 h4 h5 {
+      font-size: 1.2rem;
   }
 
-  #radius-shape-1 {
-    height: 220px;
-    width: 220px;
-    top: -60px;
-    left: -130px;
-    background: radial-gradient(#44006b, #ad1fff);
-    overflow: hidden;
+  #imagenPerfil {
+      margin-top: 7px;
+      margin-left: 5px;
+      width: 6em;
   }
-
-  #radius-shape-2 {
-    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-    bottom: -60px;
-    right: -110px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(#44006b, #ad1fff);
-    overflow: hidden;
-  }
+  .contenedor{
+      height: auto;
+      margin-bottom: 0.5em;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      padding-top: 0.5em;
+      border-radius: 0.5em;
+   }
+}
 
   .bg-glass {
-    background-color: hsla(0, 0%, 100%, 0.9) !important;
+    background-color: hsla(276, 45%, 81%, 0.9) !important;
     backdrop-filter: saturate(200%) blur(25px);
+    
   }

@@ -13,7 +13,7 @@
                             <label for="skill">
                                 <h5>Skill</h5>
                             </label>
-                            <input type="text" class="form-control" id="skill" name="skill" [(ngModel)]="skill"
+                            <input type="text" class="form-control form-control-sm" id="skill" name="skill" [(ngModel)]="skill"
                                 required>
                         </div>
                     </div>
@@ -23,16 +23,15 @@
                             <label for="porcentaje">
                                 <h5>Porcentaje</h5>
                             </label>
-                            <input type="number" class="form-control" id="porcentaje" name="porcentaje"
+                            <input type="number" class="form-control form-control-sm" id="porcentaje" name="porcentaje"
                                 [(ngModel)]="porcentaje" required>
+                                   
                         </div>
-                    </div>
+                    </div> <br>
                     <div class="row">
-                        <div class="mb-3">
-                            <br>
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button type="submit" class="btn btn-dark btn-sm">Limpiar</button>
-                                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <!--Boton de guardado-->
+                        <div class="col-10 order-first">
+                            <div class="mb-3 float-right d-flex justify-content-end">
                                 <button type="submit" class="btn btn-dark btn-sm">Agregar skill</button>
                             </div>
                         </div>

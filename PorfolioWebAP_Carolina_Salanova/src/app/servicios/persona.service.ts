@@ -17,9 +17,9 @@ export class PersonaService {
   public getPersona(): Observable<Persona>{
     return this.httpCliente.get<Persona>(this.url+'/traer/persona')
   }
-/*
-  public buscarPersona(id:number):Observable<Persona[]>{
-    return this.httpCliente.get<Persona[]>(this.url + `/buscar/persona/${id}`);
+
+  public buscarPersona(id:number):Observable<Persona>{
+    return this.httpCliente.get<Persona>(this.url + `/buscar/persona/${id}`);
   }
 
   public crearPersona(Persona: Persona):Observable<any>{
@@ -27,11 +27,11 @@ export class PersonaService {
   }
   
   public editarPersona(id:number, Persona:Persona):Observable<any>{
-    return this.httpCliente.put<any>(this.url + `/persona/editar/${id}`, Persona);
+    return this.httpCliente.put<any>(this.url + `/editar/persona/${id}`, Persona);
   }
 
   public deletePersona(id:number):Observable<any>{
     return this.httpCliente.delete<any>(this.url + `/delete/persona/${id}`);
   }
-  */
+  
 }

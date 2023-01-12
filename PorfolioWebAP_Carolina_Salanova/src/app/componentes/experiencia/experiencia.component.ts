@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 import { ExperienciaModelo } from 'src/app/modelos/experienciaModelo';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-experiencia',
@@ -9,12 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-   //isLogged = false;
-   experiencias:ExperienciaModelo[]=[];
+   experiencias:ExperienciaModelo[]=[]; 
    modoEdit:any;
    
 
-  constructor(private experienciaService:ExperienciaService) { } //Inyecta el servicio para tener acceso en la clase a los metodos.
+  constructor(private experienciaService:ExperienciaService, private router:Router) { } //Inyecta el servicio para tener acceso en la clase a los metodos.
 
   ngOnInit(): void {
       this.cargarExperiencia();
@@ -30,5 +29,23 @@ export class ExperienciaComponent implements OnInit {
    
     cargarExperiencia():void{
       this.experienciaService.mostrarListaExperiencia().subscribe(data => {this.experiencias=data});
+      }
+
+      borrarExpe(id:number){
+        if(id != undefined){
+          this.experienciaService.borrarExperiencia(id).subscribe(
+            {
+              next: data =>{ 
+              alert("Se pudo borrar la experiencia");
+              this.cargarExperiencia(); 
+              }
+              ,
+              error: err =>{
+              alert("Se pudo borrar la experiencia");
+              this.cargarExperiencia(); 
+              }
+           }
+          )
+        }
       }
   }

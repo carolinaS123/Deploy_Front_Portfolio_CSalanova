@@ -1,5 +1,5 @@
 <div>
-    <div class="contenedor">
+    <div class="contenedor" *ngIf="skillsModelo">
         <div class="d-flex p-2 bd-highlight">
             <div class="flex-shrink-0">
                 <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
@@ -10,7 +10,7 @@
                         </label>
                     </div>
                     <div class="row">
-                        <div class="mb-3" class="form-group">
+                        <div class="form-group">
                             <label for="skill">
                                 <h5>Skill</h5>
                             </label>
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="mb-3" class="form-group">
+                        <div class="form-group">
                             <label for="porcentaje">
                                 <h5>Porcentaje</h5>
                             </label>
@@ -31,7 +31,6 @@
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <div class="mb-3">
                                 <br>
-                                <button type="submit" class="btn btn-dark btn-sm">Limpiar</button>&nbsp;
                                 <button type="submit" class="btn btn-dark btn-sm">Editar skill</button>
                             </div>
                         </div>

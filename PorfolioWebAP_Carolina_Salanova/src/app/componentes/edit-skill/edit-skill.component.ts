@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SkillsModelo } from 'src/app/modelos/skillsModelo';
-import { ActivatedRoute, Router } from '@angular/router';
 import { SkillsService } from 'src/app/servicios/skills.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormGroup, NumberValueAccessor } from '@angular/forms';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-edit-skill',
@@ -9,39 +11,44 @@ import { SkillsService } from 'src/app/servicios/skills.service';
   styleUrls: ['./edit-skill.component.css']
 })
 export class EditSkillComponent implements OnInit {
+  skillsModelo: SkillsModelo=null;
+ 
 
-  skillsModelo: SkillsModelo;
-
-  constructor( private skillServ: SkillsService, private activatedRouter: ActivatedRoute, private router: Router) {}
-
+  constructor(private skillServ: SkillsService, private router: Router, private activatedRoute: ActivatedRoute) {}
+  
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRoute.snapshot.params['id'];
     this.skillServ.buscarSkill(id).subscribe(
-      data => {
-        this.skillsModelo = data;
-      }, err => {
-        alert("Error al modificar");
-        this.router.navigate(['']);
-      }
+      {
+        next: data => {
+          this.skillsModelo = data;
+        }
+        , 
+        error: err => {
+          alert("Error al editar el skill");
+          this.router.navigate(['']);
+        }
+      }  
     )
   }
   
-  onUpdate(){
-    const id = this.activatedRouter.snapshot.params['id'];
+ onUpdate():void{
+    const id = this.activatedRoute.snapshot.params['id'];
     if(this.skillsModelo != undefined){
      this.skillServ.editarSkill(id, this.skillsModelo).subscribe(
-       {  
+       {
          next: data => {
-           this.router.navigate([''])
+          alert("El skill se editó correctamente");
+           this.router.navigate(['']);
          }
          , 
          error: err => {
-           alert("Error al modificar el skill");
+           alert("Error al editar el skill");
            this.router.navigate(['']);
          }
        } 
-      )
-     }
+      ) 
+    }
   }
 
 }

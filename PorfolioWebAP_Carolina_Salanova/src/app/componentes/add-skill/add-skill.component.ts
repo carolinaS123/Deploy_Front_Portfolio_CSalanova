@@ -12,8 +12,7 @@ import { SkillsService } from 'src/app/servicios/skills.service';
 export class AddSkillComponent implements OnInit {
    skill: string;
    porcentaje: number;
-
-
+   
   constructor(private skillsServ:SkillsService, private formBuilder: FormBuilder, private router: Router)  {}
   
   ngOnInit(): void {
@@ -24,12 +23,12 @@ export class AddSkillComponent implements OnInit {
     this.skillsServ.crearSkill(habilidad).subscribe(
       {
         next: data => {
-        alert("Skill creada correctamente");
+        alert("El skill fue creado correctamente");
          this.router.navigate([''])
        }
        , 
        error: err =>{
-       alert("Skill creada correctamente");
+       alert("El skill fue creado correctamente");
           this.router.navigate([''])
        }
       }

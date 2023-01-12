@@ -14,10 +14,6 @@ export class ExperienciaService {
     return this.httpClient.get<ExperienciaModelo[]>(this.url +'mostrar');
   }
 
-  public buscarExperiencia(id:number):Observable<ExperienciaModelo[]>{
-    return this.httpClient.get<ExperienciaModelo[]>(this.url +`buscar/${id}`);
-  }
-
   public crearExperiencia(ExperienciaModelo: ExperienciaModelo):Observable<any>{
     return this.httpClient.post<any>(this.url +'crear', ExperienciaModelo);
   }
@@ -29,5 +25,9 @@ export class ExperienciaService {
   public borrarExperiencia(id:number):Observable<any>{
     return this.httpClient.delete<any>(this.url + `borrar/${id}`);
   }
-  
+
+  public buscarExperiencia(id:number):Observable<ExperienciaModelo[]>{
+    return this.httpClient.get<ExperienciaModelo[]>(this.url +`buscar/${id}`);
+  }
+
 }

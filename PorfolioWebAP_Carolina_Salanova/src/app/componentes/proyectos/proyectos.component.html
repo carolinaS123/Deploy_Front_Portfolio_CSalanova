@@ -6,12 +6,11 @@
             </div>
             <div class="col-md-2">
                 <div *ngIf="modoEdit">
-                    <button type="button" class="btn btn-dark btn-sm, botonAdd"
-                        routerLink="/add-proyecto">Agregar+</button>
+                    <button type="button" class="btn btn-dark btn-sm, botonAdd" routerLink="/addProyecto/">Agregar+</button>
                 </div>
             </div>
         </div>
-        <div class="table-responsive" *ngFor="let proyecto of listaProyectos">
+        <div class="table-responsive" *ngFor="let proyecto of proyectos">
             <table class="table table-rb-#rgb(255, 226, 146)">
                 <thead>
                     <tr>
@@ -38,25 +37,26 @@
                     </tr>
                     <tr>
                         <td>
-                            <p>{{proyecto.inicio_proy | date:"dd-MM-yyyy"}}</p>
+                            <p>{{proyecto.inicio_proy}}</p>
                         </td>
                         <td>
-                            <p>{{proyecto.fin_proy | date:"dd-MM-yyyy"}}</p>
+                            <p>{{proyecto.fin_proy}}</p>
                         </td>
                         <td>
-                            <P>Link imagen proyecto:{{proyecto.imagen}}</P>
+                            <P>Link imagen proyecto:{{proyecto.imagen_proy}}</P>
                         </td>
                         <div *ngIf="modoEdit">
                             <td>
-                                <a type="submit" class="btn-borrar, btn btn-close-white btn-sm, botonAdd">
-                                    <img class="nav-menu-link-img" src="../assets/delete.png" id="borrar">
-                                </a>
+                                <button type="submit" class="btn btn-close-white btn-sm, botonAdd">
+                                    <img class="nav-menu-link-img" src="../assets/delete.png" id="borrar"
+                                    (click)="borrarProyecto(proyecto.id)">
+                                </button>
                             </td>
                         </div>
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <P>Link Proyecto:{{proyecto.link}}</P>
+                            <P>Link Proyecto:{{proyecto.link_proy}}</P>
                         </td>
                     </tr>
                 </tbody>

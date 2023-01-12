@@ -10,10 +10,10 @@
 </datalist>
 -->
 <div>
-  <div class="contenedor">
+  <div class="contenedor" *ngIf="persona">
     <div class="d-flex p-2 bd-highlight">
       <div class="flex-shrink-0">
-        <form>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
           <div class="mb-3">
             <label class="form-label">
               <h1>Edite acerca de mi</h1>
@@ -27,6 +27,8 @@
                 <label for="formFileSm" class="form-label">
                   <h5>Foto perfil</h5>
                 </label>
+                <input type="text" class="form-control" list="datalistOptions" id="url_foto" name="url_foto"
+                  placeholder="url de la imagen de perfil" [(ngModel)]="persona.url_foto" required>
                 <datalist id="datalistOptions">
                   <option value="./assets/AvatarMaker.png">
                   <option value="./assets/AvatarMaker2.png">
@@ -43,8 +45,8 @@
                 <label for="formFileSm" class="form-label">
                   <h5>Nombre</h5>
                 </label>
-                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                  aria-label=".form-control-sm example">
+                <input typer="texto" class="form-control form-control-sm" id="nombre" name="nombre"
+                  placeholder="Nombres" [(ngModel)]="persona.nombre" required>
               </div>
             </div>
           </div>
@@ -54,8 +56,8 @@
                 <label for="formFileSm" class="form-label">
                   <h5>Apellido</h5>
                 </label>
-                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                  aria-label=".form-control-sm example">
+                <input class="form-control form-control-sm" type="text" id="apellido" name="apellido"
+                  placeholder="Apellido" [(ngModel)]="persona.apellido" required>
               </div>
             </div>
           </div>
@@ -65,8 +67,8 @@
                 <label for="formFileSm" class="form-label">
                   <h5>Título</h5>
                 </label>
-                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                  aria-label=".form-control-sm example">
+                <input class="form-control form-control-sm" type="text" id="titulo" name="titulo" placeholder="Título"
+                  [(ngModel)]="persona.titulo" required>
               </div>
             </div>
           </div>
@@ -76,21 +78,16 @@
                 <label for="formFileSm" class="form-label">
                   <h5>Acerca de mi</h5>
                 </label>
-                <textarea class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                  aria-label="With textarea"></textarea>
+                <textarea class="form-control form-control-sm" type="text" id="acerca_de" name="acerca_de"
+                  placeholder="Acerca de mi" [(ngModel)]="persona.acerca_de" required></textarea>
               </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <div class="row d-flex">
-              <div class="col-12 d-flex justify-content-end">
-                <div class="mb-3 float-right">
-                  <button type="button" class="btn btn-dark btn-sm">Cancelar</button>
-                </div>
-                &nbsp;
-                <div class="mb-3 float-right">
-                  <button type="button" class="btn btn-dark btn-sm">Guardar</button>
-                </div>
+          <div class="row">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <div class="mb-3">
+                <br>
+                <button type="submit" class="btn btn-dark btn-sm">Editar acerca de mi</button>
               </div>
             </div>
           </div>

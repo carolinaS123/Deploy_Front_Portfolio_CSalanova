@@ -2,7 +2,7 @@
     <div class="contenedor">
         <div class="d-flex p-2 bd-highlight">
             <div class="flex-shrink-0">
-                <form>
+                <form  (ngSubmit)="onCreate()" novalidate #f="ngForm">
                     <div class="mb-3">
                         <label class="form-label">
                             <h1>Agregue un proyecto mas</h1>
@@ -15,8 +15,9 @@
                                 <label for="formFileSm" class="form-label">
                                     <h5>Nombre</h5>
                                 </label>
-                                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                                    aria-label=".form-control-sm example">
+                                <input class="form-control form-control-sm" type="text" 
+                                placeholder="Nombre del proyecto" id="nombre_proy" name="nombre_proy"
+                                [(ngModel)]="nombre_proy" required >
                             </div>
                         </div>
                     </div>
@@ -27,7 +28,8 @@
                                     <h5>Descripción</h5>
                                 </label>
                                 <textarea class="form-control form-control-sm" type="text"
-                                    placeholder=".form-control-sm" aria-label="With textarea"></textarea>
+                                placeholder="Descripción" id="descripcion_proy" id="puesto" name="puesto"
+                                [(ngModel)]="descripcion_proy" required ></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -36,7 +38,9 @@
                                     <label for="formFileSm" class="form-label">
                                         <h5>Imagen del proyecto</h5>
                                     </label>
-                                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                    <input class="form-control form-control-sm" type="text" 
+                                placeholder="Link a la foto del proyecto" id="imagen_proy" name="imagen_proy"
+                                [(ngModel)]="imagen_proy" required >
                                 </div>
                             </div>
                         </div>
@@ -46,7 +50,9 @@
                                     <label for="formFileSm" class="form-label">
                                         <h5>Link al proyecto</h5>
                                     </label>
-                                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                    <input class="form-control form-control-sm" type="text" 
+                                    placeholder="Link al proyecto" id="link_proy" name="link_proy"
+                                    [(ngModel)]="link_proy" required >
                                 </div>
                             </div>
                         </div>
@@ -54,10 +60,11 @@
                             <div class="col-10 order-first">
                                 <div class="mb-3">
                                     <label for="formFileSm" class="form-label">
-                                        <h5>Desde</h5>
+                                        <h5>Inicio</h5>
                                     </label>
-                                    <input class="form-control form-control-sm" type="text"
-                                        placeholder=".form-control-sm" aria-label=".form-control-sm example">
+                                    <input class="form-control form-control-sm" type="text" 
+                                    placeholder="Inicio del proyecto" id="incio_proy" name="inicio_proy"
+                                    [(ngModel)]="inicio_proy" required >
                                 </div>
                             </div>
                         </div>
@@ -67,24 +74,19 @@
                                     <label for="formFileSm" class="form-label">
                                         <h5>Hasta</h5>
                                     </label>
-                                    <input class="form-control form-control-sm" type="text"
-                                        placeholder=".form-control-sm" aria-label=".form-control-sm example">
+                                    <input class="form-control form-control-sm" type="text" 
+                                    placeholder="Finalizacion" id="fin_proy" name="fin_proy"
+                                    [(ngModel)]="fin_proy" required >
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <div class="row d-flex">
-                                <div class="col-12 d-flex justify-content-end">
-                                    <div class="mb-3 float-right">
-                                        <button type="button" class="btn btn-dark btn-sm">Cancelar</button>
-                                    </div>
-                                    &nbsp;
-                                    <div class="mb-3 float-right">
-                                        <button type="button" class="btn btn-dark btn-sm">Guardar</button>
-                                    </div>
+                          <div class="row">
+                             <div class="col-10 d-flex justify-content-end">
+                                <div class="mb-3 float-right d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-dark btn-sm">Agregar proyecto</button>
                                 </div>
                             </div>
-                        </div>
+                         </div>
                     </div>
                 </form>
             </div>
