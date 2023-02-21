@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="table-responsive" *ngFor="let educacion of educaciones">
-      <table class="table table-responsive table-rb- ">
+      <table class="table table-responsive">
         <thead>
           <tr>
             <th scope="col" colspan="12"></th>
@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>
-              <p>{{educacion.id}}- {{educacion.institucion}}</p>
+              <p>-{{educacion.institucion}}</p>
             </td>
             <td>
               <p>{{educacion.titulacion}}</p>
@@ -33,7 +33,7 @@
             </td>
             <div *ngIf="modoEdit">
             <td>
-              <button type="submit" class="btn btn-close-white btn-sm, botonAdd">
+              <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editEducacion/{{educacion.id}}">
                 <img class="botonEfecto"
                 src="../assets/edit.png"
                 id="editar" >
@@ -43,7 +43,7 @@
               <button type="submit" class="btn btn-close-white btn-sm, botonAdd">
                 <img class="nav-menu-link-img"
                   src="../assets/delete.png"
-                  id="borrar">
+                  id="borrar" (click)="borrarEducacion(educacion.id)">
               </button>
             </td>
           </div>
@@ -55,6 +55,7 @@
           </tr>
         </tbody>
       </table>
+      <br><br>
     </div>
   </div>
 </section>

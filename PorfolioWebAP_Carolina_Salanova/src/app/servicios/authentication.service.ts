@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs'; 
-import { BotonLogoutComponent } from '../componentes/boton-logout/boton-logout.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-  url='http://localhost:8080/authentication/login';
+  url='http://localhost:8080/personas/authentication/login/';
   currentUserSubject:BehaviorSubject<any>;
  
   constructor(private http:HttpClient) {

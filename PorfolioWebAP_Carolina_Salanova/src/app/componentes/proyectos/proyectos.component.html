@@ -21,7 +21,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <p>{{proyecto.nombre_proy}}</p>
+                            <p>-{{proyecto.nombre_proy}}</p>
                         </td>
                         <td colspan="2">
                             <p>{{proyecto.descripcion_proy}}</p>
@@ -29,7 +29,7 @@
                         <div *ngIf="modoEdit">
                             <td>
                                 <button type="submit" class="btn btn-close-white btn-sm, botonAdd"
-                                    routerLink="editProyecto{{proyecto.id}}">
+                                    routerLink="/editProyecto/{{proyecto.id}}">
                                     <img class="botonEfecto" src="../assets/edit.png">
                                 </button>
                             </td>
@@ -61,6 +61,7 @@
                     </tr>
                 </tbody>
             </table>
+            <br><br>
         </div>
     </div>
 </section>

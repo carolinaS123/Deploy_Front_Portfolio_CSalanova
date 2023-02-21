@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProyectosComponent } from '../proyectos/proyectos.component';
 import { ProyectosService } from 'src/app/servicios/proyectos.service';
 import { ProyectosModelo } from 'src/app/modelos/proyectosModelo';
 

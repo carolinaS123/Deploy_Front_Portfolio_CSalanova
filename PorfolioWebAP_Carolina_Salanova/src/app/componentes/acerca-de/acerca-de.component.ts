@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 //import { DatosPorfolioService } from 'src/app/servicios/datos-porfolio.service';
 import { Persona } from 'src/app/modelos/persona';
 import { PersonaService } from 'src/app/servicios/persona.service';
-import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-acerca-de',
@@ -10,14 +9,15 @@ import { Subscriber } from 'rxjs';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-//Variables de instancia
   persona: Persona = new Persona("", "", "", "", "", "", "", "", "");
+  //persona: Persona[]=[]; 
   modoEdit:any;
   
   constructor(public personaService: PersonaService) { }
-
-  ngOnInit(): void {                                         //Definir info a mostrar
-    this.personaService.getPersona().subscribe(data =>{this.persona=data;});
+  
+  
+  ngOnInit(): void {                                         
+    this.cargarPersona();
   
     if(sessionStorage.getItem('CurrentUser') == "null"){
         this.modoEdit = false;
@@ -26,6 +26,10 @@ export class AcercaDeComponent implements OnInit {
     }else{
        this.modoEdit=true;
     }
+  }
+
+  cargarPersona():void{
+    this.personaService. mostrarPersona().subscribe(data=>{this.persona=data});
   }
 
 }

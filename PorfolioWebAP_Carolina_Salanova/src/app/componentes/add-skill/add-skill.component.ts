@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SkillsModelo } from 'src/app/modelos/skillsModelo';
 import { SkillsService } from 'src/app/servicios/skills.service';
 
 @Component({
-  selector: 'app-add-skill',
+  selector: 'app-add-skill', 
   templateUrl: './add-skill.component.html',
   styleUrls: ['./add-skill.component.css']
 })
 export class AddSkillComponent implements OnInit {
-   skill: string;
+   skill: String;
    porcentaje: number;
+
    
   constructor(private skillsServ:SkillsService, private formBuilder: FormBuilder, private router: Router)  {}
   
-  ngOnInit(): void {
-  }
-    
+  ngOnInit(): void {}
+  
+
   onCreate(): void{
     const habilidad = new SkillsModelo(this.skill, this.porcentaje);
     this.skillsServ.crearSkill(habilidad).subscribe(
@@ -28,19 +29,12 @@ export class AddSkillComponent implements OnInit {
        }
        , 
        error: err =>{
-       alert("El skill fue creado correctamente");
+       alert("El skill no pudo ser creado");
           this.router.navigate([''])
        }
       }
     )
   }
-
-
-/*
-  limpiar():void{
-    this.form.reset();
-  }
-*/
 
   }
 

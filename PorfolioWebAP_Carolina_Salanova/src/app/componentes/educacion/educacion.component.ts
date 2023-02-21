@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EducacionModelo } from 'src/app/modelos/educacionModelo';
 import { EducacionService } from 'src/app/servicios/educacion.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-educacion',
@@ -31,6 +30,23 @@ export class EducacionComponent implements OnInit {
     this.educacionService. mostrarListaEducacion().subscribe(data=>{this.educaciones=data});
   }
 
+  borrarEducacion(id:number){
+    if(id != undefined){
+      this.educacionService.borrarEducacion(id).subscribe(
+        {
+          next: data =>{ 
+          alert("Se pudo borrar el skill");
+          this.cargarEducacion(); 
+          }
+          ,
+          error: err =>{
+          alert("Se pudo borrar el skill");
+          this.cargarEducacion(); 
+          }
+       }
+      )
+    }
+  }
 
 }
 

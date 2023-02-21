@@ -10,16 +10,16 @@ import { Subscriber } from 'rxjs';
 })
 export class BannerComponent implements OnInit {
   //Variables de instancia
-  persona: Persona = new Persona("", "", "", "", "", "", "", "", "");
+  bannerPerso: Persona = new Persona("", "", "", "", "", "", "", "", "");
+  //persona: Persona[]=[]; 
   modoEdit:any;
   url_banner:any="";
 
 
   constructor(private personaService: PersonaService) { }
-
-  ngOnInit(): void {
-
-    this.personaService.getPersona().subscribe(data =>{this.persona=data});
+  /*
+  ngOnInit(): void {                                         
+    this.cargarBanner();
   
     if(sessionStorage.getItem('CurrentUser') == "null"){
         this.modoEdit = false;
@@ -28,6 +28,24 @@ export class BannerComponent implements OnInit {
     }else{
        this.modoEdit=true;
     }
+  }
+  
+  cargarBanner():void{
+    this.personaService. mostrarPersona().subscribe(data=>{this.persona=data});
+  }*/
+
+  
+  ngOnInit(): void {
+    this.cargarBanner();
+  
+    if(sessionStorage.getItem('CurrentUser') == "null"){
+        this.modoEdit = false;
+    }else if(sessionStorage.getItem('currentUser') == null){
+       this.modoEdit=false;
+    }else{
+       this.modoEdit=true;
+    }
+
     /*
     this.porfolioService.getDataPorfolio().subscribe(data =>{
       console.log("Imagen del banner"+(data));
@@ -35,5 +53,7 @@ export class BannerComponent implements OnInit {
     });
     */
   }
-
+  cargarBanner():void{
+      this.personaService.mostrarPersona().subscribe(data =>{this.bannerPerso=data});
+    }
 }

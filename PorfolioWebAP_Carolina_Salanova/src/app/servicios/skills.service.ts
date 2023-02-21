@@ -23,12 +23,6 @@ export class SkillsService {
     return this.httpClient.put<any>(this.url + `editar/${id}`, skillsModelo);
   }
 
-  /** 
-   *   public update(id: number, skill: Skill): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, skill);
-  }
-  */
-
   public borrarSkill(id:number):Observable<any>{
     return this.httpClient.delete<any>(this.url + `borrar/${id}`);
   }

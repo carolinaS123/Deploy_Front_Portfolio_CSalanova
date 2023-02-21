@@ -1,12 +1,15 @@
 <!--header Banner -->
 <header>
   <div class="contenedor">
-     <img class="img-fluid"
-        src="{{persona.url_banner}}" id="banner1">
+   <div class="table-responsive">
+     <img class="img-fluid" alt="Imagen del banner"
+        src="{{bannerPerso.url_banner}}" id="banner1">
       <div *ngIf="modoEdit">
-         <button type="submit" class="btn btn-close-dar btn-sm, botonAdd">
+         <button type="submit" class="btn btn-close-dar btn-sm, botonAdd" 
+         routerLink="/editBanner/{{bannerPerso.id}}">
          <img class="botonEfecto"src="../assets/edit.png"id="editar" >
          </button>
       </div>
+   </div>   
   </div>
 </header>

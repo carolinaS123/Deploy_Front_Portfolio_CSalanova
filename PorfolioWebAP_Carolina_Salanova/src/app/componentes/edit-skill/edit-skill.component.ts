@@ -2,8 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SkillsModelo } from 'src/app/modelos/skillsModelo';
 import { SkillsService } from 'src/app/servicios/skills.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, NumberValueAccessor } from '@angular/forms';
-import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-edit-skill',
@@ -31,7 +30,7 @@ export class EditSkillComponent implements OnInit {
       }  
     )
   }
-  
+
  onUpdate():void{
     const id = this.activatedRoute.snapshot.params['id'];
     if(this.skillsModelo != undefined){

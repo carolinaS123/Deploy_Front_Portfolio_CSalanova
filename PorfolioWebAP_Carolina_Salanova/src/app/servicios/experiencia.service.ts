@@ -18,16 +18,16 @@ export class ExperienciaService {
     return this.httpClient.post<any>(this.url +'crear', ExperienciaModelo);
   }
   
-  public editarExperiencia(id: number, ExperienciaModelo:ExperienciaModelo):Observable<any>{
-    return this.httpClient.put<any>(this.url + `editar/${id}`, ExperienciaModelo);
+  public editarExperiencia(id: number, experienciaModelo:ExperienciaModelo):Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, experienciaModelo);
   }
 
   public borrarExperiencia(id:number):Observable<any>{
     return this.httpClient.delete<any>(this.url + `borrar/${id}`);
   }
 
-  public buscarExperiencia(id:number):Observable<ExperienciaModelo[]>{
-    return this.httpClient.get<ExperienciaModelo[]>(this.url +`buscar/${id}`);
+  public buscarExperiencia(id:number):Observable<ExperienciaModelo>{
+    return this.httpClient.get<ExperienciaModelo>(this.url +`buscar/${id}`);
   }
 
 }

@@ -1,73 +1,106 @@
 <div>
     <div class="contenedor">
-        <div class="d-flex p-2 bd-highlight">
+        <div class="row bg-dark p-2 bg-opacity-10">
             <div class="flex-shrink-0">
-                <form  (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <form (ngSubmit)="onCreate()" novalidate #formExp="ngForm">
                     <div class="mb-3">
-                        <label class="form-label">
+                        <label class="form-label"> 
                             <h1>Agregue una experiencia mas</h1>
                         </label>
                     </div>
                     <div class="row">
                         <div class="col-10 order-first">
-                            <div class="mb-3">
-                                <label for="formFileSm" class="form-label">
-                                    <h5>Empresa&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                            <div class="mb-3" class="form-group">
+                                <label for="Empresa" class="form-label">
+                                    <h5>Empresa</h5>
                                 </label>
-                                <input type="text" class="form-control form-control-sm" id="empresa" name="empresa"
-                                [(ngModel)]="empresa" required placeholder="Empresa">
+                                <input type="text" class="form-control form-control-sm" id="idEmpresa" name="idEmpresa"
+                                 autocomplete="off" [(ngModel)]="empresa" #idEmpresa="ngModel" required
+                                 placeholder="Nombre de la empresa o emprendimiento">
+                                 <div *ngIf="idEmpresa.invalid && (idEmpresa.dirty || idEmpresa.touched)" class="alert alert-danger">
+                                    <div *ngIf="idEmpresa.errors['required']">
+                                       *El nombre de la empresa o emprendimiento es requerido!
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-10 order-first">
-                            <div class="mb-3">
+                            <div class="mb-3" class="form-group">
                                 <label for="formFileSm" class="form-label">
-                                    <h5>Puesto&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                                    <h5>Puesto</h5>
+                                </label> 
+                                <input type="text" class="form-control form-control-sm" id="idPuesto" name="idPuesto" 
+                                autocomplete="off" [(ngModel)]="puesto" #idPuesto="ngModel" required
+                                placeholder="Puesto o tarea">
+                                <div *ngIf="idPuesto.invalid && (idPuesto.dirty || idPuesto.touched)" class="alert alert-danger">
+                                    <div *ngIf="idPuesto.errors['required']">
+                                       *El puesto/tarea es requerido!
+                                    </div>
+                                 </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 order-first">
+                            <div class="mb-3" class="form-group">
+                                <label for="formFileSm" class="form-label">
+                                    <h5>Desde</h5>
                                 </label>
-                                <input type="text" class="form-control form-control-sm" id="puesto" name="puesto"
-                                placeholder="Puesto" [(ngModel)]="puesto" required>
+                                <input type="text" class="form-control form-control-sm" id="idInicio_exp" name="idInicio_exp" 
+                                autocomplete="off" [(ngModel)]="inicio_exp" #idInicio_exp="ngModel" required
+                                placeholder="Fecha/año de inicio de actividad">
+                                <div *ngIf="idInicio_exp.invalid && (idInicio_exp.dirty || idInicio_exp.touched)" class="alert alert-danger">
+                                    <div *ngIf="idInicio_exp.errors['required']">
+                                       *La fecha/año de inicio es requerida!
+                                    </div>
+                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-10 order-first">
-                            <div class="mb-3">
+                            <div class="mb-3" class="form-group">
                                 <label for="formFileSm" class="form-label">
-                                    <h5>Desde&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                                    <h5>Hasta</h5>
                                 </label>
-                                <input class="form-control form-control-sm" type="text"  id="incio_exp" name="incio_exp"
-                                placeholder="Desde" [(ngModel)]="inicio_exp" required>
+                                <input type="text" class="form-control form-control-sm"  id="idFin_exp" name="idFin_exp" 
+                                autocomplete="off" [(ngModel)]="fin_exp" #idFin_exp="ngModel" required
+                                placeholder="Año de finalización o si continúa">
+                                 <div *ngIf="idFin_exp.invalid && (idFin_exp.dirty || idFin_exp.touched)" class="alert alert-danger">
+                                    <div *ngIf="idFin_exp.errors['required']">
+                                       *Año de finalización o si se continúa es requerida!
+                                    </div>
+                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-10 order-first">
-                            <div class="mb-3">
+                            <div class="mb-3" class="form-group">
                                 <label for="formFileSm" class="form-label">
-                                    <h5>Hasta&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                                    <h5>Descripción</h5>
                                 </label>
-                                <input class="form-control form-control-sm" type="text" id="fin_exp" name="fin_exp"
-                                placeholder="Hasta" aria-label=".form-control-sm example"
-                                [(ngModel)]="fin_exp" required>
+                                <textarea class="form-control form-control-sm" type="text" id="idDescripcion_exp" name="idDescripcion_exp" 
+                                aria-label="With textarea"
+                                autocomplete="off" [(ngModel)]="descripcion_exp"  #idDescripcion_exp="ngModel" required
+                                placeholder="Descripcion de la experiencia">
+                               </textarea>
+                               <div *ngIf="idDescripcion_exp.invalid && (idDescripcion_exp.dirty || idDescripcion_exp.touched)" class="alert alert-danger">
+                                <div *ngIf="idFin_exp.errors['required']">
+                                   *La descripcion de la experiencia es requerida!
+                                </div>
+                             </div>
                             </div>
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-10 order-first">
-                            <div class="mb-3">
-                                <label for="formFileSm" class="form-label">
-                                    <h5>Descripción&nbsp;&nbsp;&nbsp;&nbsp;</h5>
-                                </label>
-                                <textarea class="form-control form-control-sm" type="text" id="descripcion_exp" name="descripcion_exp"
-                                placeholder="Descripción" aria-label="With textarea"
-                                [(ngModel)]="descripcion_exp" required></textarea>
+                            <div class="mb-3 float-right d-flex justify-content-end">
+                                <button type="submit" class="btn btn-dark btn-sm" [disabled]="!formExp.form.valid">Agregar experiencia</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-10 order-first">
-                        <div class="mb-3 float-right d-flex justify-content-end">
-                                <button type="submit" class="btn btn-dark btn-sm">Agregar experiencia</button>
                         </div>
                     </div>
                 </form>

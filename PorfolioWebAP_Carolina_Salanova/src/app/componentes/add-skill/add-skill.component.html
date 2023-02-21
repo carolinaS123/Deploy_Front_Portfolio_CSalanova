@@ -1,8 +1,8 @@
 <div>
     <div class="contenedor">
-        <div class="d-flex p-2 bd-highlight">
+        <div class="row bg-dark p-2 bg-opacity-10">
             <div class="flex-shrink-0">
-                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <form (ngSubmit)="onCreate()" novalidate #formSkill="ngForm">
                     <div class="mb-3">
                         <label class="form-label">
                             <h1>Agregue un skill mas</h1>
@@ -10,29 +10,43 @@
                     </div>
                     <div class="row">
                         <div class="mb-3" class="form-group">
-                            <label for="skill">
+                            <label>
                                 <h5>Skill</h5>
                             </label>
-                            <input type="text" class="form-control form-control-sm" id="skill" name="skill" [(ngModel)]="skill"
-                                required>
+                            <input type="text" class="form-control form-control-sm" autocomplete="off" id="idSkill"
+                            name="idSkill" placeholder="Nombre del skill o habilidad" aria-label=".form-control-sm example"
+                            [(ngModel)]="skill" #idSkill="ngModel" required>
+                            <div *ngIf="idSkill.invalid && (idSkill.dirty || idSkill.touched)" class="alert alert-danger">
+                               <div *ngIf="idSkill.errors['required']">
+                                  *El skill o habilidad es requerido!
+                               </div>
+                            </div>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="mb-3" class="form-group">
-                            <label for="porcentaje">
+                            <label>
                                 <h5>Porcentaje</h5>
                             </label>
-                            <input type="number" class="form-control form-control-sm" id="porcentaje" name="porcentaje"
-                                [(ngModel)]="porcentaje" required>
-                                   
+                            <input type="number" class="form-control form-control-sm" autocomplete="off" type="text" id="idPorcentaje"
+                            name="idPorcentaje" placeholder="Porcentaje del skill" aria-label=".form-control-sm example"
+                            [(ngModel)]="porcentaje" #idPorcetaje="ngModel" required min="1" max="100">
+                            <div *ngIf="idPorcetaje.invalid && (idPorcetaje.dirty || idPorcetaje.touched)" class="alert alert-danger">
+                                <div *ngIf="idPorcetaje.errors['required']">
+                                   *El porcentaje es requerido!
+                                </div>
+                                 <div *ngIf="idPorcetaje.errors['Max']">
+                                    *Hasta 100
+                                 </div>
+                             </div>
                         </div>
-                    </div> <br>
+                    </div> 
+                    <br>
                     <div class="row">
-                    <!--Boton de guardado-->
                         <div class="col-10 order-first">
                             <div class="mb-3 float-right d-flex justify-content-end">
-                                <button type="submit" class="btn btn-dark btn-sm">Agregar skill</button>
+                                <button type="submit" class="btn btn-dark btn-sm" [disabled]="!formSkill.form.valid">Agregar skill</button>
                             </div>
                         </div>
                     </div>

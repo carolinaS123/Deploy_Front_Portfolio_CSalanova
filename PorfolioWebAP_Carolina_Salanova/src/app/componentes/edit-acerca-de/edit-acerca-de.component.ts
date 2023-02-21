@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/servicios/persona.service';
   styleUrls: ['./edit-acerca-de.component.css']
 })
 export class EditAcercaDeComponent implements OnInit {
-  persona:Persona=null;
+  perso: Persona=null;
 
   constructor(private persoServ:PersonaService, private activatedRoute:ActivatedRoute ,private router:Router) { }
 
@@ -18,7 +18,7 @@ export class EditAcercaDeComponent implements OnInit {
     this.persoServ.buscarPersona(id).subscribe(
       {
         next: data => {
-          this.persona = data;
+          this.perso = data;
         }
         , 
         error: err => {
@@ -31,8 +31,8 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate():void{
     const id = this.activatedRoute.snapshot.params['id'];
-    if(this.persona != undefined){
-     this.persoServ.editarPersona(id,this.persona).subscribe(
+    if(this.perso != undefined){
+     this.persoServ.editarPersona(id, this.perso).subscribe(
        {
          next: data => {
           alert("Acerca de mi se editó correctamente");
@@ -47,5 +47,5 @@ export class EditAcercaDeComponent implements OnInit {
       ) 
     }
   }
-
+  
 }

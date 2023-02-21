@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="table-responsive" *ngFor="let experiencia of experiencias">
-      <table class="table table-responsive table-bg-#rgb(255, 226, 146)">
+      <table class="table table-responsive">
         <thead>
           <tr>
             <th scope="col" colspan="12">
@@ -21,7 +21,7 @@
         <tbody>
           <tr>
             <td>
-              <p>{{experiencia.id}}- {{experiencia.empresa}}</p>
+              <p>-{{experiencia.empresa}}</p>
             </td>
             <td>
               <P>{{experiencia.puesto}}</P>
@@ -32,10 +32,9 @@
             <td>
               <p>{{experiencia.fin_exp}}</p>
             </td>
-         
             <div *ngIf="modoEdit">
             <td>
-              <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editExperiencia/">
+              <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editExperiencia/{{experiencia.id}}">
                 <img class="botonEfecto"
                 src="../assets/edit.png"
                 id="editar" >
@@ -50,12 +49,13 @@
             </div>
           </tr>
           <tr>
-            <td colspan="12">
+            <td colspan="4">
               <p>{{experiencia.descripcion_exp}}</p>
             </td> 
           </tr>
         </tbody>
       </table>
+      <br><br>
     </div>
   </div>
 </section>

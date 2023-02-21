@@ -26,7 +26,7 @@ export class ProyectosService {
     return this.httpClient.delete<any>(this.url + `borrar/${id}`);
   }
 
-  public buscarProyecto(id:number):Observable<ProyectosModelo[]>{
-    return this.httpClient.get<ProyectosModelo[]>(this.url +`buscar/${id}`);
+  public buscarProyecto(id:number):Observable<ProyectosModelo>{
+    return this.httpClient.get<ProyectosModelo>(this.url +`buscar/${id}`);
   }
 }

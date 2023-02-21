@@ -13,7 +13,7 @@ export class ExperienciaComponent implements OnInit {
    modoEdit:any;
    
 
-  constructor(private experienciaService:ExperienciaService, private router:Router) { } //Inyecta el servicio para tener acceso en la clase a los metodos.
+  constructor(private experienciaService:ExperienciaService, private router:Router) { } 
 
   ngOnInit(): void {
       this.cargarExperiencia();

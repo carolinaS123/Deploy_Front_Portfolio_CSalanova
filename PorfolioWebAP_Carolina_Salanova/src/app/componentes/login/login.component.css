@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-
+c
 .body {
   height: 100%;
   margin-top: 10px;
@@ -15,6 +15,9 @@ h3 h4 h5 {
 
 p {
   font-weight: bold;
+}
+.alerta{
+  color: red;
 }
 .botonAdd:hover{
   filter:alpha(opacity=50);

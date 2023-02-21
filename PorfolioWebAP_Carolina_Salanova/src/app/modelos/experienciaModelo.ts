@@ -12,7 +12,6 @@ export class ExperienciaModelo {
         this.inicio_exp = inicio_exp;
         this.fin_exp = fin_exp;
         this.descripcion_exp = descripcion_exp;
-    
     }
 }
 

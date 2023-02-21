@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EducacionModelo } from 'src/app/modelos/educacionModelo';
 import { EducacionService } from 'src/app/servicios/educacion.service';
@@ -10,52 +9,42 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
   styleUrls: ['./edit-educacion.component.css']
 })
 export class EditEducacionComponent implements OnInit {
-//educa: Educacion = null;
-//educacion!:Educacion;
-   //album:any=[]; 
-   //educacion!:Educacion; 
-  //educacion:any=[];
-  educacion:EducacionModelo[]=[];
-  institucion!:string;
-  titulacion!:string;
-  inicio_edu!:string;
-  fin_edu!:string;
-  descripcion_edu!:string;
+  eduModelo: EducacionModelo = null;
+
   
-  constructor(
-    private educacionService: EducacionService, 
-    private activatedRouter : ActivatedRoute,
-    private router: Router,
-    private formBuilder:FormBuilder
-    ) { 
-
-
-    }
-
-    cargarEducacion():void{
-      this.educacionService. mostrarListaEducacion().subscribe(data=>{this.educacion=data});
-    } 
+  constructor(private eduServ: EducacionService, private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionService.buscarEducacion(id).subscribe(
-      data =>{this.educacion = data;
-      }/*, err =>{
-         alert("Error al modificar");
-         this.router.navigate(['']);
-      }*/
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.eduServ.buscarEducacion(id).subscribe(
+      {
+        next: data => {
+          this.eduModelo = data;
+        }
+        , 
+        error: err => {
+          alert("Error al editar el estudio");
+          this.router.navigate(['']);
+        }
+      }  
     )
   }
-  /* 
-  onUpdate(): void{
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionService.editarEducacion(id, this.educacion).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err => {
-        alert("Error al modificar la educacion");
-        this.router.navigate(['']);
-      }
-    )
-  }*/
+  onUpdate():void{
+    const id = this.activatedRoute.snapshot.params['id'];
+    if(this.eduModelo != undefined){
+     this.eduServ.editarEducacion(id, this.eduModelo).subscribe(
+       {
+         next: data => {
+          alert("El estudio se editó correctamente");
+           this.router.navigate(['']);
+         }
+         , 
+         error: err => {
+           alert("Error al editar el estudio");
+           this.router.navigate(['']);
+         }
+       } 
+      ) 
+    }
+  }
 }

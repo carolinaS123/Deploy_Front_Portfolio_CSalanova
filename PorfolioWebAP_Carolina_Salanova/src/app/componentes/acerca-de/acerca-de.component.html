@@ -1,29 +1,30 @@
-<!-------ACERCA DE MI-------->
 <section id="acerca_de" class="acerca">
    <div class="contenedor">
-      <div class="d-flex p-2 bd-highlight">
-         <div class="flex-shrink-0">
-            <img class="img-responsive rounded-circle" id="imagenPerfil"
-               src="{{persona.url_foto}}"
-               alt="...">
-         </div>
-         <div class="flex-grow-1 ms-3">
-            <h3 small class="text-muted bg-dark  p-2 bg-opacity-10">{{persona.nombre}} {{persona.apellido}}</h3>
-            <h5>{{persona.titulo}}</h5>
-            <br>
-            <h5>{{persona.acerca_de}}</h5>
-         </div>
-         <div *ngIf="modoEdit"> 
-         <div class="flex-grow-1 ms-3">
-               <br>
-               <br>
-               <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editAcercaDe/{{persona.id}}">
-                  <img class="botonEfecto"
-                  src="../assets/edit.png"
-                  id="editar" >
-                </button>
-           </div>    
-         </div>
+      <div class="table-responsive">
+        <div class="d-flex p-2 bd-highlight">
+           <div class="flex-shrink-0">
+              <img class="img-responsive rounded-circle" id="imagenPerfil" alt="Imagen del perfil"
+                 src="{{persona.url_foto}}"
+                 alt="...">
+           </div>
+           <div class="flex-grow-1 ms-3">
+              <h3 small class="text-muted bg-dark  p-2 bg-opacity-10">{{persona.nombre}} {{persona.apellido}}</h3>
+              <h5>{{persona.titulo}}</h5>
+              <br>
+              <h5>{{persona.acerca_de}}</h5>
+           </div>
+           <div *ngIf="modoEdit"> 
+           <div class="flex-grow-1 ms-3">
+                 <br>
+                 <br>
+                 <button type="submit" class="btn btn-close-white btn-sm, botonAdd" routerLink="/editAcercaDe/{{persona.id}}">
+                    <img class="botonEfecto"
+                    src="../assets/edit.png"
+                    id="editar" >
+                  </button>
+             </div>    
+           </div>
+        </div>
       </div>
    </div>
 </section>

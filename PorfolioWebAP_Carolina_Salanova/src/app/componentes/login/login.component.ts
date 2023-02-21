@@ -13,12 +13,13 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private authenticationServicio:AuthenticationService, private ruta:Router) {
     ///Creamos el grupo de controles para el formulario de login
-      this.form = this.formBuilder.group(
-        {
-          email: ['', [Validators.required, Validators.email]],
-          password: ['', [Validators.required, Validators.minLength(8)]]
-        })
-   }
+    this.form = this.formBuilder.group(
+      {
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(8)]]
+      })
+  }
+
 
   ngOnInit(): void {
   }
@@ -38,7 +39,6 @@ export class LoginComponent implements OnInit {
   get PasswordValid() {
     return this.Password?.touched && !this.Password?.valid;
   }
-
   onEnviar(event:Event){
     event.preventDefault;
     this.authenticationServicio.Login(this.form.value).subscribe(data=>{console.log("DATA:" + JSON.stringify(data));

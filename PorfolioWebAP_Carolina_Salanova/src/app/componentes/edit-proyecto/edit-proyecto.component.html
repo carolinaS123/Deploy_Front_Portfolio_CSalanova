@@ -2,7 +2,7 @@
     <div class="contenedor">
         <div class="d-flex p-2 bd-highlight">
             <div class="flex-shrink-0">
-                <form>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                     <div class="mb-3">
                         <label class="form-label">
                             <h1>Edite el proyecto</h1>
@@ -15,8 +15,8 @@
                                 <label for="formFileSm" class="form-label">
                                     <h5>Nombre</h5>
                                 </label>
-                                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                                    aria-label=".form-control-sm example">
+                                <input class="form-control form-control-sm" type="text" id="nombre_proy" name="nombre_proy"
+                                [(ngModel)]="proyecModelo.nombre_proy" required>
                             </div>
                         </div>
                     </div>
@@ -26,8 +26,8 @@
                                 <label for="formFileSm" class="form-label">
                                     <h5>Descripción</h5>
                                 </label>
-                                <textarea class="form-control form-control-sm" type="text"
-                                    placeholder=".form-control-sm" aria-label="With textarea"></textarea>
+                                <textarea class="form-control form-control-sm" type="text" id="descripcion_proy" name="descripcion_proy"
+                                [(ngModel)]="proyecModelo.descripcion_proy" required></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -36,7 +36,8 @@
                                     <label for="formFileSm" class="form-label">
                                         <h5>Imagen del proyecto</h5>
                                     </label>
-                                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                    <input class="form-control form-control-sm" type="text" id="imagen_proy" name="imagen_proy"
+                                    [(ngModel)]="proyecModelo.imagen_proy" required>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +47,8 @@
                                     <label for="formFileSm" class="form-label">
                                         <h5>Link al proyecto</h5>
                                     </label>
-                                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                    <input class="form-control form-control-sm" type="text" id="link_proy" name="link_proy"
+                                    [(ngModel)]="proyecModelo.link_proy" required>
                                 </div>
                             </div>
                         </div>
@@ -56,8 +58,8 @@
                                     <label for="formFileSm" class="form-label">
                                         <h5>Desde</h5>
                                     </label>
-                                    <input class="form-control form-control-sm" type="text"
-                                        placeholder=".form-control-sm" aria-label=".form-control-sm example">
+                                    <input class="form-control form-control-sm" type="text" id="inicio_proy" name="inicio_proy"
+                                    [(ngModel)]="proyecModelo.inicio_proy" required>
                                 </div>
                             </div>
                         </div>
@@ -67,8 +69,8 @@
                                     <label for="formFileSm" class="form-label">
                                         <h5>Hasta</h5>
                                     </label>
-                                    <input class="form-control form-control-sm" type="text"
-                                        placeholder=".form-control-sm" aria-label=".form-control-sm example">
+                                    <input class="form-control form-control-sm" type="text" id="fin_proy" name="fin_proy"
+                                     [(ngModel)]="proyecModelo.fin_proy" required>
                                 </div>
                             </div>
                         </div>
@@ -76,8 +78,7 @@
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <div class="mb-3">
                                     <br>
-                                    <button type="submit" class="btn btn-dark btn-sm">Limpiar</button>&nbsp;
-                                    <button type="submit" class="btn btn-dark btn-sm">Editar skill</button>
+                                    <button type="submit" class="btn btn-dark btn-sm">Editar proyecto</button>
                                 </div>
                             </div>
                         </div>
