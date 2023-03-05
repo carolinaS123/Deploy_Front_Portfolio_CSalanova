@@ -15,14 +15,14 @@
                                     <h5>Nombre del proyecto</h5>
                                 </label>
                                 <input class="form-control form-control-sm" type="text" autocomplete="off"
-                                placeholder="Nombre del proyecto" id="idNombre_proy" name="idNombre_proy"
-                                [(ngModel)]="nombre_proy" #idNombre_proy="ngModel" required>
+                                    placeholder="Nombre del proyecto" id="idNombre_proy" name="idNombre_proy"
+                                    [(ngModel)]="nombre_proy" #idNombre_proy="ngModel" required>
                                 <div *ngIf="idNombre_proy.invalid && (idNombre_proy.dirty || idNombre_proy.touched)"
-                                class="alert alert-danger">
-                                <div *ngIf="idNombre_proy.errors['required']">
-                                    *El nombre de la institución es requerido!
+                                    class="alert alert-danger">
+                                    <div *ngIf="idNombre_proy.errors['required']">
+                                        *El nombre de la institución es requerido!
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -33,14 +33,15 @@
                                     <h5>Descripción</h5>
                                 </label>
                                 <textarea class="form-control form-control-sm" type="text" autocomplete="off"
-                                placeholder="Descripción del proyecto" id="idDescripcion_proy" name="idDescripcion_proy"
-                                [(ngModel)]="descripcion_proy" #idDescripcion_proy="ngModel" required></textarea>
+                                    placeholder="Descripción del proyecto" id="idDescripcion_proy"
+                                    name="idDescripcion_proy" [(ngModel)]="descripcion_proy"
+                                    #idDescripcion_proy="ngModel" required></textarea>
                                 <div *ngIf="idDescripcion_proy.invalid && (idDescripcion_proy.dirty || idDescripcion_proy.touched)"
-                                class="alert alert-danger">
-                                <div *ngIf="idDescripcion_proy.errors['required']">
-                                    *La descripción del proyecto es requerido!
+                                    class="alert alert-danger">
+                                    <div *ngIf="idDescripcion_proy.errors['required']">
+                                        *La descripción del proyecto es requerido!
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                         <div class="row">
@@ -50,14 +51,15 @@
                                         <h5>Imagen del proyecto</h5>
                                     </label>
                                     <input class="form-control form-control-sm" type="text" autocomplete="off"
-                                placeholder="Link a la foto del proyecto" id="idImagen_proy" name="idImagen_proy"
-                                [(ngModel)]="imagen_proy" #idImagen_proy="ngModel" required >
-                                <div *ngIf="idImagen_proy.invalid && (idImagen_proy.dirty || idImagen_proy.touched)"
-                                class="alert alert-danger">
-                                <div *ngIf="idImagen_proy.errors['required']">
-                                    *El link de la foto del proyecto es requerido!
-                                </div>
-                            </div>
+                                        placeholder="Link a la foto del proyecto" id="idImagen_proy"
+                                        name="idImagen_proy" [(ngModel)]="imagen_proy" #idImagen_proy="ngModel"
+                                        required>
+                                    <div *ngIf="idImagen_proy.invalid && (idImagen_proy.dirty || idImagen_proy.touched)"
+                                        class="alert alert-danger">
+                                        <div *ngIf="idImagen_proy.errors['required']">
+                                            *El link de la foto del proyecto es requerido!
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -68,14 +70,14 @@
                                         <h5>Link al proyecto</h5>
                                     </label>
                                     <input class="form-control form-control-sm" type="text" autocomplete="off"
-                                    placeholder="Link al proyecto" id="idLink_proy" name="idLink_proy"
-                                    [(ngModel)]="link_proy"  #idLink_proy="ngModel" required>
+                                        placeholder="Link al proyecto" id="idLink_proy" name="idLink_proy"
+                                        [(ngModel)]="link_proy" #idLink_proy="ngModel" required>
                                     <div *ngIf="idLink_proy.invalid && (idLink_proy.dirty || idLink_proy.touched)"
-                                    class="alert alert-danger">
-                                    <div *ngIf="idLink_proy.errors['required']">
-                                        *El link al proyecto es requerido!
+                                        class="alert alert-danger">
+                                        <div *ngIf="idLink_proy.errors['required']">
+                                            *El link al proyecto es requerido!
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -86,14 +88,14 @@
                                         <h5>Inicio</h5>
                                     </label>
                                     <input class="form-control form-control-sm" type="text" autocomplete="off"
-                                    placeholder="Inicio del proyecto" id="idInicio_proy" name="idInicio_proy"
-                                    [(ngModel)]="inicio_proy" #idInicio_proy="ngModel" required>
+                                        placeholder="Inicio del proyecto" id="idInicio_proy" name="idInicio_proy"
+                                        [(ngModel)]="inicio_proy" #idInicio_proy="ngModel" required>
                                     <div *ngIf="idInicio_proy.invalid && (idInicio_proy.dirty || idInicio_proy.touched)"
-                                    class="alert alert-danger">
-                                    <div *ngIf="idInicio_proy.errors['required']">
-                                        *La fecha/año del inicio del proyecto es requerido!
+                                        class="alert alert-danger">
+                                        <div *ngIf="idInicio_proy.errors['required']">
+                                            *La fecha/año del inicio del proyecto es requerido!
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -104,24 +106,25 @@
                                         <h5>Hasta</h5>
                                     </label>
                                     <input class="form-control form-control-sm" type="text" autocomplete="off"
-                                    placeholder="Finalizacion" id="idFin_proy" name="idFin_proy"
-                                    [(ngModel)]="fin_proy" #idFin_proy="ngModel"  required>
+                                        placeholder="Finalizacion" id="idFin_proy" name="idFin_proy"
+                                        [(ngModel)]="fin_proy" #idFin_proy="ngModel" required>
                                     <div *ngIf="idFin_proy.invalid && (idFin_proy.dirty || idFin_proy.touched)"
-                                    class="alert alert-danger">
-                                    <div *ngIf="idFin_proy.errors['required']">
-                                        *La fecha/año de la teminación del proyecto es requerido!
+                                        class="alert alert-danger">
+                                        <div *ngIf="idFin_proy.errors['required']">
+                                            *La fecha/año de la teminación del proyecto es requerido!
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                             <div class="col-10 d-flex justify-content-end">
+                            <div class="col-10 d-flex justify-content-end">
                                 <div class="mb-3 float-right d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-dark btn-sm" [disabled]="!formProy.form.valid">Agregar proyecto</button>
+                                    <button type="submit" class="btn btn-dark btn-sm"
+                                        [disabled]="!formProy.form.valid">Agregar proyecto</button>
                                 </div>
                             </div>
-                         </div>
+                        </div>
                     </div>
                 </form>
             </div>

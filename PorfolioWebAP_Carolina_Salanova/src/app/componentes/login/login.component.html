@@ -1,19 +1,22 @@
 <div>
   <div class="contenedor">
-    <div class="d-flex p-2 bd-highlight">
+    <div class="row ">
       <div class="flex-shrink-0">
-        <div class="card bg-glass">
-          <div class="card-body px-4 py-5 px-md-5">
-            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+          <div class="mb-3">
+            <label class="form-label">
+              <h1>Login</h1>
+              <p>Ingrese su email y contraseña</p>
+            </label>
+          </div>
+          <div class="row">
+            <div class="col-12 order-first">
               <div class="mb-3">
                 <label class="form-label">
-                    <h1>Login</h1>
-                    <p>Ingrese su email y contraseña</p>
+                  <p>Email</p><br>
                 </label>
-              </div>
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example3">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="email" id="form3Example3" aria-label=".form-control-sm example" formControlName="email" [class.border-danger]="EmailValid">
+                <input type="email" aria-label=".form-control-sm example" formControlName="email"
+                  [class.border-danger]="EmailValid">
                 <div *ngIf="Email?.errors  && Email?.touched">
                   <p *ngIf="Email?.hasError('required')" class="error text-danger badge-danger my-2 py-2">
                     *El email es requerido.
@@ -23,25 +26,35 @@
                   </p>
                 </div>
               </div>
-              <div class="form-outline mb-4">
-                <label class="form-label"
-                  for="exampleInputPassword1">Contraseña&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="password" id="form3Example4" aria-label=".form-control-sm example" formControlName="password"
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 order-first">
+              <div class="mb-3">
+                <label class="form-label">
+                  <p>Contraseña</p><br>
+                </label>
+                <input type="password" aria-label=".form-control-sm example" formControlName="password"
                   [class.border-danger]="PasswordValid">
                 <div *ngIf="Password?.errors  && Password?.touched">
                   <p *ngIf="Password?.hasError('required')" class="error text-danger badge-danger my-2 py-2">
                     *La contraseña es requerida.
                   </p>
-                  <!--<div *ngIf="Password?.hasError('minLength')" class="error">-->
-                  <p *ngIf="Password.errors?.minlength" class="error text-danger badge-danger my-2 py-2">  
-                    *La contraseña debe tener 8 carácteres como mínimo. 
+                  <p *ngIf="Password.errors?.minlength" class="error text-danger badge-danger my-2 py-2">
+                    *La contraseña debe tener 8 carácteres como mínimo.
                   </p>
                 </div>
               </div>
-              <button type="submit" class="btn btn-dark btn-sm">Enviar</button>
-            </form>
+            </div>
           </div>
-        </div>
+          <div class="row d-flex">
+            <div class="col-12 d-flex justify-content-end">
+              <div class="mb-3 float-right">
+                <button type="submit" class="btn btn-dark btn-sm">Enviar</button>
+              </div>
+            </div>
+          </div>  
+        </form>
       </div>
     </div>
   </div>

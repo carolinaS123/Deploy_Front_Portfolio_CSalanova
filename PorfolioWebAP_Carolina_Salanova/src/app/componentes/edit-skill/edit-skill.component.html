@@ -1,42 +1,52 @@
-<div>
-    <div class="contenedor" *ngIf="skillsModelo">
-        <div class="d-flex p-2 bd-highlight">
-            <div class="flex-shrink-0">
-                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                    <div class="mb-3">
-                        <label class="form-label">
-                            <h1>Edite el skill</h1>
-                            <h1></h1>
+<div class="contenedor" *ngIf="skillsModelo">
+    <div class="d-flex p-2 bd-highlight">
+        <div class="flex-shrink-0">
+            <form (ngSubmit)="onUpdate()" novalidate #fSkill="ngForm">
+                <div class="mb-3">
+                    <label class="form-label">
+                        <h1>Edite el skill</h1>
+                        <h1></h1>
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="skill">
+                            <h5>Skill</h5>
                         </label>
-                    </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="skill">
-                                <h5>Skill</h5>
-                            </label>
-                            <input type="text" class="form-control" id="skill" name="skill"
-                                [(ngModel)]="skillsModelo.skill" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="porcentaje">
-                                <h5>Porcentaje</h5>
-                            </label>
-                            <input type="number" class="form-control" id="porcentaje" name="porcentaje"
-                                [(ngModel)]="skillsModelo.porcentaje" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <div class="mb-3">
-                                <br>
-                                <button type="submit" class="btn btn-dark btn-sm">Editar skill</button>
+                        <input type="text" class="form-control" id="idSkill" name="idSkill"
+                         autocomplete="off" placeholder="Nombre del skill o habilidad"
+                         [(ngModel)]="skillsModelo.skill" #idSkill="ngModel" required>
+                         <div *ngIf="idSkill.invalid && (idSkill.dirty || idSkill.touched)" class="alert alert-danger">
+                            <div *ngIf="idSkill.errors['required']">
+                               *El skill o habilidad es requerido!
                             </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="porcentaje">
+                            <h5>Porcentaje</h5>
+                        </label>
+                        <input type="number" class="form-control" id="idPorcentaje" name="idPorcentaje"
+                            autocomplete="off" placeholder="Porcentaje del skill"
+                            [(ngModel)]="skillsModelo.porcentaje" #idPorcentaje="ngModel" required>
+                            <div *ngIf="idPorcentaje.invalid && (idPorcentaje.dirty || idPorcentaje.touched)" class="alert alert-danger">
+                                <div *ngIf="idPorcentaje.errors['required']">
+                                   *El porcentaje es requerido!
+                                </div>
+                             </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <div class="mb-3">
+                            <br>
+                            <button type="submit" class="btn btn-dark btn-sm" [disabled]="!fSkill.form.valid">Editar skill</button>
                         </div>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

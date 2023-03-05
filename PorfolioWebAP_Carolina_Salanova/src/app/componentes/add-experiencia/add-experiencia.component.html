@@ -19,7 +19,7 @@
                                  placeholder="Nombre de la empresa o emprendimiento">
                                  <div *ngIf="idEmpresa.invalid && (idEmpresa.dirty || idEmpresa.touched)" class="alert alert-danger">
                                     <div *ngIf="idEmpresa.errors['required']">
-                                       *El nombre de la empresa o emprendimiento es requerido!
+                                       *El nombre de la empresa/emprendimiento es requerido!
                                     </div>
                                 </div>
                             </div>
@@ -68,11 +68,11 @@
                                 <input type="text" class="form-control form-control-sm"  id="idFin_exp" name="idFin_exp" 
                                 autocomplete="off" [(ngModel)]="fin_exp" #idFin_exp="ngModel" required
                                 placeholder="Año de finalización o si continúa">
-                                 <div *ngIf="idFin_exp.invalid && (idFin_exp.dirty || idFin_exp.touched)" class="alert alert-danger">
+                                <div *ngIf="idFin_exp.invalid && (idFin_exp.dirty || idFin_exp.touched)" class="alert alert-danger">
                                     <div *ngIf="idFin_exp.errors['required']">
                                        *Año de finalización o si se continúa es requerida!
                                     </div>
-                                 </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,10 +88,10 @@
                                 placeholder="Descripcion de la experiencia">
                                </textarea>
                                <div *ngIf="idDescripcion_exp.invalid && (idDescripcion_exp.dirty || idDescripcion_exp.touched)" class="alert alert-danger">
-                                <div *ngIf="idFin_exp.errors['required']">
-                                   *La descripcion de la experiencia es requerida!
-                                </div>
-                             </div>
+                                    <div *ngIf="idFin_exp.errors['required']">
+                                       *La descripcion de la experiencia es requerida!
+                                    </div>
+                               </div>
                             </div>
                         </div>
                     </div>

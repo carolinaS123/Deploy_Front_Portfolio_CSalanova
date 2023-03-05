@@ -1,72 +1,102 @@
-<div>
-    <div class="contenedor">
-        <div class="d-flex p-2 bd-highlight">
-            <div class="flex-shrink-0">
-                <div class="row">
-                    <div class="mb-3">
-                        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                            <label for="exampleInputEmail1" class="form-label">
-                                <h1>Edite el estudio</h1>
-                            </label>
-                            <div class="col-10 order-first">
-                                <div class="mb-3">
-                                    <label for="Institución" class="form-label">
-                                        <h5>Institución</h5>
-                                    </label>
-                                    <input class="form-control form-control-sm" type="text" id="institucion" name="institucion" 
-                                    [(ngModel)]="eduModelo.institucion" required>
-                                </div>
-                            </div>
-                            <div class="col-10 order-first">
-                                <div class="mb-3">
-                                    <label for="formFileSm" class="form-label">
-                                        <h5>Carrera/Curso</h5>
-                                    </label>
-                                    <input class="form-control form-control-sm" type="text" id="titulacion"
-                                        name="titulacion"
-                                        [(ngModel)]="eduModelo.titulacion" required>
-                                </div>
-                            </div>
-                            <div class="col-10 order-first">
-                                <div class="mb-3">
-                                    <label for="formFileSm" class="form-label">
-                                        <h5>Desde</h5>
-                                    </label>
-                                    <input class="form-control form-control-sm" type="text" id="inicio_edu" name="inicio_edu"
-                                        [(ngModel)]="eduModelo.inicio_edu" required>
-                                </div>
-
-                            </div>
-                            <div class="col-10 order-first">
-                                <div class="mb-3">
-                                    <label for="formFileSm" class="form-label">
-                                        <h5>Hasta</h5>
-                                    </label>
-                                    <input class="form-control form-control-sm" type="text" id="fin_edu"
-                                        name="fin_edu"
-                                        [(ngModel)]="eduModelo.fin_edu" required>
-                                </div>
-                            </div>
-                            <div class="col-10 order-first">
-                                <div class="mb-3">
-                                    <label for="formFileSm" class="form-label">
-                                        <h5>Descripción</h5>
-                                    </label>
-                                    <textarea class="form-control form-control-sm" type="text" id="descripcion_edu"
-                                        name="descripcion_edu"
-                                        [(ngModel)]="eduModelo.descripcion_edu" required></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <div class="mb-3">
-                                        <br>
-                                        <button type="submit" class="btn btn-dark btn-sm">Editar educación</button>
+<div class="contenedor">
+    <div class="row bg-dark p-2 bg-opacity-10">
+        <div class="flex-shrink-0">
+            <div class="row">
+                <div class="mb-3">
+                    <form (ngSubmit)="onUpdate()" novalidate #fEduc="ngForm">
+                        <label for="exampleInputEmail1" class="form-label">
+                            <h1>Edite el estudio</h1>
+                        </label>
+                        <div class="col-10 order-first">
+                            <div class="mb-3">
+                                <label for="Institución" class="form-label">
+                                    <h5>Institución</h5>
+                                </label>
+                                <input class="form-control form-control-sm" type="text" id="idInstitucion"
+                                    name="idInstitucion" autocomplete="off" placeholder="Nombre de la institución"
+                                    [(ngModel)]="eduModelo.institucion" #idInstitucion="ngModel" required>
+                                <div *ngIf="idInstitucion.invalid && (idInstitucion.dirty || idInstitucion.touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="idInstitucion.errors['required']">
+                                        *El nombre de la institución es requerido!
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="col-10 order-first">
+                            <div class="mb-3">
+                                <label for="formFileSm" class="form-label">
+                                    <h5>Carrera/Curso</h5>
+                                </label>
+                                <input class="form-control form-control-sm" type="text" id="idTitulacion"
+                                    name="idTitulacion" autocomplete="off" placeholder="Nombre de la carrera o curso"
+                                    [(ngModel)]="eduModelo.titulacion" #idTitulacion="ngModel" required>
+                                <div *ngIf="idTitulacion.invalid && (idTitulacion.dirty || idTitulacion.touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="idTitulacion.errors['required']">
+                                        *El nombre de la carrera o curso es requerido!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-10 order-first">
+                            <div class="mb-3">
+                                <label for="formFileSm" class="form-label">
+                                    <h5>Desde</h5>
+                                </label>
+                                <input class="form-control form-control-sm" type="text" id="idInicio_edu"
+                                    name="idInicio_edu" autocomplete="off"
+                                    placeholder="Fecha/año de inicio de la carrera/curso"
+                                    [(ngModel)]="eduModelo.inicio_edu" #idInicio_edu="ngModel" required>
+                                <div *ngIf="idInicio_edu.invalid && (idInicio_edu.dirty || idInicio_edu.touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="idInicio_edu.errors['required']">
+                                        *La fecha/año de inicio es requerida!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-10 order-first">
+                            <div class="mb-3">
+                                <label for="formFileSm" class="form-label">
+                                    <h5>Hasta</h5>
+                                </label>
+                                <input class="form-control form-control-sm" type="text" id="idFin_edu" name="idFin_edu"
+                                    autocomplete="off" placeholder="Año de finalización o en curso"
+                                    [(ngModel)]="eduModelo.fin_edu" #idFin_edu="ngModel" required>
+                                    <div *ngIf="idFin_edu.invalid && (idFin_edu.dirty || idFin_edu.touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="idFin_edu.errors['required']">
+                                        *Año de finalización/en curso es requerida!
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="col-10 order-first">
+                            <div class="mb-3">
+                                <label for="formFileSm" class="form-label">
+                                    <h5>Descripción</h5>
+                                </label>
+                                <textarea class="form-control form-control-sm" type="text" id="idDescripcion_edu" name="idDescripcion_edu"
+                                     autocomplete="off" placeholder="Descripcion de la experiencia"
+                                     [(ngModel)]="eduModelo.descripcion_edu" #idDescripcion_edu="ngModel" required></textarea>
+                                     <div *ngIf="idDescripcion_edu.invalid && (idDescripcion_edu.dirty || idDescripcion_edu.touched)"
+                                     class="alert alert-danger">
+                                     <div *ngIf="idDescripcion_edu.errors['required']">
+                                         *La descripcion de la carrera/curso es requerida!
+                                     </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <div class="mb-3">
+                                    <br>
+                                    <button type="submit" class="btn btn-dark btn-sm" [disabled]="!fEduc.form.valid">Editar educación</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

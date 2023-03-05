@@ -1,8 +1,8 @@
 <div>
     <div class="contenedor">
-        <div class="d-flex p-2 bd-highlight">
+        <div class="row bg-dark p-2 bg-opacity-10">
             <div class="flex-shrink-0">
-                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <form (ngSubmit)="onUpdate()" novalidate #fExper="ngForm">
                     <div class="mb-3">
                         <label class="form-label">
                             <h1>Edite la experiencia</h1>
@@ -15,8 +15,14 @@
                                 <label for="formFileSm" class="form-label">
                                     <h5>Empresa</h5>
                                 </label>
-                                <input class="form-control form-control-sm" type="text" id="empresa" name="empresa"
-                                [(ngModel)]="expeModelo.empresa" required>
+                                <input class="form-control form-control-sm" type="text" id="idEmpresa" name="idEmpresa"
+                                autocomplete="off" placeholder="Nombre de la empresa o emprendimiento"
+                                [(ngModel)]="expeModelo.empresa" #idEmpresa="ngModel" required>
+                                <div *ngIf="idEmpresa.invalid && (idEmpresa.dirty || idEmpresa.touched)" class="alert alert-danger">
+                                    <div *ngIf="idEmpresa.errors['required']">
+                                       *El nombre de la empresa/emprendimiento es requerido!
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -26,8 +32,14 @@
                                 <label for="formFileSm" class="form-label">
                                     <h5>Puesto</h5>
                                 </label>
-                                <input class="form-control form-control-sm" type="text" id="puesto" name="puesto"
-                                [(ngModel)]="expeModelo.puesto" required>
+                                <input class="form-control form-control-sm" type="text" id="idPuesto" name="idPuesto"
+                                autocomplete="off" placeholder="Puesto o tarea"
+                                [(ngModel)]="expeModelo.puesto" #idPuesto="ngModel" required>
+                                <div *ngIf="idPuesto.invalid && (idPuesto.dirty || idPuesto.touched)" class="alert alert-danger">
+                                    <div *ngIf="idPuesto.errors['required']">
+                                       *El puesto/tarea es requerido!
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -37,9 +49,15 @@
                                 <label for="formFileSm" class="form-label">
                                     <h5>Desde</h5>
                                 </label>
-                                <input class="form-control form-control-sm" type="text" id="inicio_exp" name="inicio_exp"
-                                [(ngModel)]="expeModelo.inicio_exp" required>
-                            </div>
+                                <input class="form-control form-control-sm" type="text" id="idInicioExp" name="idInicioExp"
+                                autocomplete="off" placeholder="Fecha o año de inicio"
+                                [(ngModel)]="expeModelo.inicio_exp"  #idInicio_exp="ngModel" required>
+                                <div *ngIf="idInicio_exp.invalid && (idInicio_exp.dirty || idInicio_exp.touched)" class="alert alert-danger">
+                                    <div *ngIf="idInicio_exp.errors['required']">
+                                        *La fecha/año de inicio es requerida!
+                                    </div>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                     <div class="row">
@@ -48,8 +66,14 @@
                                 <label for="formFileSm" class="form-label">
                                     <h5>Hasta</h5>
                                 </label>
-                                <input class="form-control form-control-sm" type="text" id="fin_exp" name="fin_exp"
-                                [(ngModel)]="expeModelo.fin_exp" required>
+                                <input class="form-control form-control-sm" type="text" id="idFin_exp" name="idFin_exp"
+                                autocomplete="off" placeholder="Año de finalización o si continúa"
+                                [(ngModel)]="expeModelo.fin_exp" #idFin_exp="ngModel" required>
+                                <div *ngIf="idFin_exp.invalid && (idFin_exp.dirty || idFin_exp.touched)" class="alert alert-danger">
+                                    <div *ngIf="idFin_exp.errors['required']">
+                                       *Año de finalización o si se continúa es requerida!
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -59,8 +83,15 @@
                                 <label for="formFileSm" class="form-label">
                                     <h5>Descripción</h5>
                                 </label>
-                                <textarea class="form-control form-control-sm" type="text" id="descripcion_exp" name="descripcion_exp"
-                                [(ngModel)]="expeModelo.descripcion_exp" required></textarea>
+                                <textarea class="form-control form-control-sm" type="text" id="idDescripcion_exp" name="idDescripcion_exp"
+                                autocomplete="off" placeholder="Descripcion de la experiencia"
+                                [(ngModel)]="expeModelo.descripcion_exp" #idDescripcion_exp="ngModel" required>
+                                </textarea>
+                                <div *ngIf="idDescripcion_exp.invalid && (idDescripcion_exp.dirty || idDescripcion_exp.touched)" class="alert alert-danger">
+                                    <div *ngIf="idFin_exp.errors['required']">
+                                       *La descripcion de la experiencia es requerida!
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -68,7 +99,7 @@
                          <div class="col-12 d-flex justify-content-end">
                              <div class="mb-3 float-right">
                                 <br>
-                                <button type="submit" class="btn btn-dark btn-sm">Editar Experiencia</button>
+                                <button type="submit" class="btn btn-dark btn-sm" [disabled]="!fExper.form.valid">Editar Experiencia</button>
                             </div>
                         </div>
                     </div>

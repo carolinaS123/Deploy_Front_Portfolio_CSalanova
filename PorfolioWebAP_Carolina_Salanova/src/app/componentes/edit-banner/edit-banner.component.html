@@ -1,56 +1,49 @@
-<!-- Para el input banner, para elegir entre 4 o 5 diferentes
-<label for="exampleDataList" class="form-label">Datalist example</label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-<datalist id="datalistOptions">
-  <option value="./assets/banner1.png">
-  <option value="New York">
-  <option value="Seattle">
-  <option value="Los Angeles">
-  <option value="Chicago">
-</datalist>
--->
-<div>
-  <div class="contenedor">
-    <div class="d-flex p-2 bd-highlight">
-      <div class="flex-shrink-0">
-        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-          <div class="mb-3">
-            <label class="form-label">
-              <h1>Edite el banner</h1>
-              <h1></h1>
-            </label>
+<div class="contenedor">
+  <div class="row bg-dark p-2 bg-opacity-10">
+    <div class="flex-shrink-0">
+      <form (ngSubmit)="onUpdate()" novalidate #formBanner="ngForm">
+        <div class="mb-3">
+          <label class="form-label">
+            <h1>Edite el banner</h1>
+            <h1></h1>
+          </label>
+        </div>
+        <div class="row">
+          <div class="col-12 order-first">
+            <div class="mb-3">
+              <label for="formFileSm" class="form-label">
+                <h5>Imagen del banner</h5>
+              </label>
+              <input class="form-control" list="datalistOptions" id="idUrl_banner" name="idUrl_banner"
+                autocomplete="off" placeholder="Elija las opciones de banners" 
+                [(ngModel)]="bannerModelo.url_banner" #idUrl_banner="ngModel" required>
+              <datalist id="datalistOptions">
+                <option value="./assets/banner1.png">
+                <option value="./assets/banner2.png">
+                <option value="./assets/banner3.png">
+                <option value="...">
+                <option value="...">
+              </datalist>
+              <div *ngIf="idUrl_banner.invalid && (idUrl_banner.dirty || idUrl_banner.touched)" class="alert alert-danger">
+                <div *ngIf="idUrl_banner.errors['required']">
+                   *Elija entre las opciones de banners<br>
+                   *La url de la imagen es requerida!
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <div class="col-12 order-first">
+        </div>
+        <div class="modal-footer">
+          <div class="row d-flex">
+            <div class="col-12 d-flex justify-content-end">
               <div class="mb-3">
-                <label for="formFileSm" class="form-label">
-                  <h5>Imagen del banner</h5>
-                </label>
-                <input class="form-control" list="datalistOptions" id="url_banner" name="url_banner"
-                placeholder="Elija las opciones de imágenes"
-                [(ngModel)]="bannerModelo.url_banner" required>
-                <datalist id="datalistOptions">
-                  <option value="./assets/banner1.png">
-                  <option value="./assets/banner2.png">
-                  <option value="...">
-                  <option value="...">
-                  <option value="...">
-                </datalist>
+                <br>
+                <button type="submit" class="btn btn-dark btn-sm" [disabled]="!formBanner.form.valid">Editar banner</button>
               </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <div class="row d-flex">
-              <div class="col-12 d-flex justify-content-end">
-                <div class="mb-3">
-                  <br>
-                  <button type="submit" class="btn btn-dark btn-sm">Editar banner</button>
-              </div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>

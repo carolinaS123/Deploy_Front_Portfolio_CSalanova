@@ -1,8 +1,8 @@
 <div>
   <div class="contenedor">
-    <div class="d-flex p-2 bd-highlight">
+    <div class="row bg-dark p-2 bg-opacity-10">
       <div class="flex-shrink-0">
-        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <form (ngSubmit)="onUpdate()" novalidate #formAcerca="ngForm">
           <div class="mb-3">
             <label class="form-label">
               <h1>Edite acerca de mi</h1>
@@ -15,9 +15,9 @@
                 <label for="url_foto" class="form-label">
                   <h5>Imagen del perfil</h5>
                 </label>
-                <input type="text" class="form-control" list="datalistOptions" id="url_foto" name="url_foto"
-                placeholder="Elija las opciones de imagenes"
-                [(ngModel)]="perso.url_foto" required>
+                <input type="text" class="form-control" list="datalistOptions" id="idUrl_foto" name="idUrl_foto"
+                autocomplete="off" placeholder="Elija las opciones de imágenes"
+                [(ngModel)]="perso.url_foto" #idUrl_foto="ngModel" required>
                 <datalist id="datalistOptions">
                   <option value="./assets/AvatarMaker.png">
                   <option value="./assets/AvatarMaker2.png">
@@ -25,7 +25,13 @@
                   <option value="...">
                   <option value="...">
                 </datalist>
-              </div>
+                <div *ngIf="idUrl_foto.invalid && (idUrl_foto.dirty || idUrl_foto.touched)" class="alert alert-danger">
+                  <div *ngIf="idUrl_foto.errors['required']">
+                     *Elija entre las opciones de imágenes<br>
+                     *La url de la imagen es requerida!
+                  </div>
+                </div>
+              </div>   
             </div>
           </div>
           <div class="row">
@@ -34,8 +40,14 @@
                 <label for="nombre" class="form-label">
                   <h5>Nombre</h5>
                 </label>
-                <input typer="texto" class="form-control form-control-sm" id="nombre" name="nombre"
-                  [(ngModel)]="perso.nombre" required>
+                <input typer="texto" class="form-control form-control-sm" id="idNombre" name="idNombre"
+                  autocomplete="off" placeholder="Tu nombre/s"
+                  [(ngModel)]="perso.nombre" #idNombre="ngModel" required>
+                  <div *ngIf="idNombre.invalid && (idNombre.dirty || idNombre.touched)" class="alert alert-danger">
+                    <div *ngIf="idNombre.errors['required']">
+                       *Tu nombre es requerido!
+                    </div>
+                 </div>
               </div>
             </div>
           </div>
@@ -45,8 +57,14 @@
                 <label for="apellido" class="form-label">
                   <h5>Apellido</h5>
                 </label>
-                <input class="form-control form-control-sm" type="text" id="apellido" name="apellido"
-                 [(ngModel)]="perso.apellido" required>
+                <input class="form-control form-control-sm" type="text" id="idApellido" name="idApellido"
+                 autocomplete="off"  placeholder="Tu apellido/s"
+                 [(ngModel)]="perso.apellido" #idApellido="ngModel" required>
+                 <div *ngIf="idApellido.invalid && (idApellido.dirty || idApellido.touched)" class="alert alert-danger">
+                  <div *ngIf="idApellido.errors['required']">
+                     *Tu apellido es requerido!
+                  </div>
+               </div>
               </div>
             </div>
           </div>
@@ -56,8 +74,14 @@
                 <label for="titulo" class="form-label">
                   <h5>Título</h5>
                 </label>
-                <input class="form-control form-control-sm" type="text" id="titulo" name="titulo"
-                  [(ngModel)]="perso.titulo" required>
+                <input class="form-control form-control-sm" type="text" id="idTitulo" name="idTitulo"
+                  autocomplete="off" placeholder="Título u oficio" 
+                  [(ngModel)]="perso.titulo" #idTitulo="ngModel" required>
+                  <div *ngIf="idTitulo.invalid && (idTitulo.dirty || idTitulo.touched)" class="alert alert-danger">
+                    <div *ngIf="idTitulo.errors['required']">
+                       *El título u oficio es requerido!
+                    </div>
+                 </div>
               </div>
             </div>
           </div>
@@ -67,8 +91,15 @@
                 <label for="acerca_de" class="form-label">
                   <h5>Reseña sobre mi</h5>
                 </label>
-                <textarea class="form-control form-control-sm" type="text" id="acerca_de" name="acerca_de"
-                  [(ngModel)]="perso.acerca_de" required></textarea>
+                <textarea class="form-control form-control-sm" type="text" id="idAcerca_de" name="idAacerca_de"
+                  autocomplete="off"  placeholder="Describe quién eres"  
+                  [(ngModel)]="perso.acerca_de"  #idAcerca_de="ngModel" required>
+                </textarea>
+                <div *ngIf="idAcerca_de.invalid && (idAcerca_de.dirty || idAcerca_de.touched)" class="alert alert-danger">
+                  <div *ngIf="idAcerca_de.errors['required']">
+                     *Describir quién eres es requerido!
+                  </div>
+               </div>
               </div>
             </div>
           </div>
@@ -76,7 +107,7 @@
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <div class="mb-3">
                 <br>
-                <button type="submit" class="btn btn-dark btn-sm">Editar acerca de mi</button>
+                <button type="submit" class="btn btn-dark btn-sm" [disabled]="formAcerca.form.valid">Editar acerca de mi</button>
               </div>
             </div>
           </div>
