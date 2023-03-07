@@ -5,8 +5,8 @@ Portfolio_CSalanova_Deploy_Frontend
 
 ## Descripción del proyecto:
 En este repositorio se encuentra el frontend de un portfolio web, solicitado como proyecto integrador para la aprobación de la diplomatura de Argentina Programa 3.0. 
-Es un portfolio de caractísticas sencillas en el cual se presenta un banner, imagén de perfil de la persona su información personal como nombre, apellido, profesión, una una pequeña reseña de quién es como presentación, su experiencia laboral, estudios, skills o habilidades y proyectos. Todos estos datos pueden ser editados ingresando por login, con su email y password correctos. 
-(Main: Readme; Master:Proyecto)
+Es un portfolio de caractísticas sencillas en el cual se presenta un banner, imagén de perfil de la persona su información personal como nombre, apellido, profesión, una una pequeña reseña de quién es como presentación, su experiencia laboral, estudios, skills o habilidades y proyectos. Todos estos datos pueden ser editados ingresando por login, con su email y password correctos. Es lento por favor tengan paciencia ya que su base de datos se encuentra alojado en una cuenta no paga ya que es un proyecto educativo, desde ya muchas gracias!:blush:
+
 
 ## Tecnologia utilizada para el Frontend:
 
