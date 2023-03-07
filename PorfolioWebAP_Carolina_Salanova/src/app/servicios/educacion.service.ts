@@ -7,7 +7,9 @@ import { EducacionModelo } from '../modelos/educacionModelo';
   providedIn: 'root'
 })
 export class EducacionService {
-  url = 'http://localhost:8080/educaciones/'
+  //url = 'http://localhost:8080/educaciones/'
+  url = 'https://portfoliocsalanova.onrender.com/educaciones/'
+
   constructor(private httpClient: HttpClient) { }
   
   public mostrarListaEducacion():Observable<EducacionModelo[]>{

@@ -7,7 +7,9 @@ import { ExperienciaModelo } from '../modelos/experienciaModelo';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url = 'http://localhost:8080/experiencias/'
+ // url = 'http://localhost:8080/experiencias/'
+  url = 'https://portfoliocsalanova.onrender.com/experiencias/'
+
   constructor(private httpClient:HttpClient) { }
 
  public mostrarListaExperiencia():Observable<ExperienciaModelo[]>{

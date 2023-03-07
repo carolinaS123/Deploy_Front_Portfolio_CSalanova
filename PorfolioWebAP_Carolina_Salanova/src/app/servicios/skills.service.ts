@@ -7,7 +7,8 @@ import { SkillsModelo } from '../modelos/skillsModelo';
   providedIn: 'root'
 })
 export class SkillsService {
-  url = 'http://localhost:8080/skills/'
+  //url = 'http://localhost:8080/skills/'
+  url = 'https://portfoliocsalanova.onrender.com/skills/'
   
   constructor(private httpClient:HttpClient) { }
 
