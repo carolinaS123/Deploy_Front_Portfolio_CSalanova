@@ -26,7 +26,8 @@ typescript                      4.7.4
 
 ## Diseño de la base de datos:
 Diagrama de entidad relación del diseño de la base de datos:
-![BD_DER_Porfolio_final](https://user-images.githubusercontent.com/95061840/221385795-f793a094-0884-4dfd-aee7-4f6f8cd9de80.png)
+![BD_DER_Porfolio_final](https://user-images.githubusercontent.com/95061840/223558436-750ca007-a2ca-4fb7-8293-9b1132d3e40d.png)
+
 
 ## Acceso al portfolio:
 
