@@ -5,8 +5,10 @@ Portfolio_CSalanova_Deploy_Frontend
 
 ## Descripción del proyecto:
 En este repositorio se encuentra el frontend de un portfolio web, solicitado como proyecto integrador para la aprobación de la diplomatura de Argentina Programa 3.0. 
-Es un portfolio de caractísticas sencillas en el cual se presenta un banner, imagén de perfil de la persona su información personal como nombre, apellido, profesión, una una pequeña reseña de quién es como presentación, su experiencia laboral, estudios, skills o habilidades y proyectos. Todos estos datos pueden ser editados ingresando por login, con su email y password correctos. 
-(Main: Readme; Master:Proyecto)
+Es un portfolio de caractísticas sencillas en el cual se presenta un banner, imagén de perfil de la persona su información personal como nombre, apellido, profesión, una una pequeña reseña de quién es como presentación, su experiencia laboral, estudios, skills o habilidades y proyectos. Todos estos datos pueden ser editados ingresando por login, con su email y password correctos.
+
+:bangbang::warning: La applicación web es lenta por favor tenga paciencia ya que la base de datos de la misma se encuentra alojada en una cuenta no paga ya que es un proyecto educativo, desde ya muchas gracias!:blush:
+
 
 ## Tecnologia utilizada para el Frontend:
 
@@ -26,9 +28,10 @@ typescript                      4.7.4
 
 ## Diseño de la base de datos:
 Diagrama de entidad relación del diseño de la base de datos:
-![BD_DER_Porfolio_final](https://user-images.githubusercontent.com/95061840/221385795-f793a094-0884-4dfd-aee7-4f6f8cd9de80.png)
+![BD_DER_Porfolio_final](https://user-images.githubusercontent.com/95061840/223558436-750ca007-a2ca-4fb7-8293-9b1132d3e40d.png)
 
-## Acceso al portfolio:
+
+## Acceso al portfolio: https://portfolioargprocsalanova.web.app/
 
 ## Autora: 
 Carolina Salanova (siguiendo los requerimientos del proyecto integrador solicitado para la diplomatura de Argentina Programa 3.0 - #YoProgramo)
